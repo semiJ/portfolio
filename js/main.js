@@ -55,6 +55,36 @@ $("header li").on("click",function(){
         $(".codingArea li").eq(i).addClass("codingOrderedList");
     });
 
+    $(".codingArea ol li").on("click", function(){
+        i = $(this).index();
+
+        stop.animate({"opacity":"1"});
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+    let codingBox = document.querySelectorAll(".codingBox");
+    let cB = gsap.timeline({
+        scrollTrigger : {
+            trigger: ".coding",
+            pin: true,
+            scrub: 1,
+            start: "rigth rigth",
+            end: "+=400%", // 시작부분에서 400%까지 스크롤한 후 종료
+            markers: false,
+        }
+    });
+
+    cB.from(codingBox, {
+        X: "400%",
+        duration:"10",
+        ease: "none",
+        stagger:"5",
+        opacity: "0"
+    });
+    cB.to(codingBox, {
+        X:"0"
+    });
+
 // Design
     gsap.registerPlugin(ScrollTrigger);
     let upBox = document.querySelectorAll(".upBox");
