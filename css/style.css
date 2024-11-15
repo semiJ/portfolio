@@ -96,7 +96,7 @@
     
     /* section welcome 영역*/
     
-    #welcome {
+    .welcome {
         width: 100%;
         height: 100vh;
         background-color: var(--main_color1);
@@ -104,7 +104,7 @@
         overflow: hidden;
     }
     
-    #welcome h2 {
+    .welcome h2 {
         font-size: var(--first_big_size);
         position: absolute;
         left: 5%;
@@ -113,10 +113,11 @@
         z-index: 1;
     }
     
-    #welcome h2 > span {
+    .welcome h2 > span {
         color: var(--sub_color3);
     }
 
+    /* 움직이는 하트 */
     .ain {
         width: 30%;
         height: 30%;
@@ -152,6 +153,8 @@
         stroke-linecap: round;
         stroke-miterlimit: 20;
     }
+
+    /* /움직이는 하트 */
     
     /* /section welcome 영역*/
 
@@ -532,7 +535,7 @@
     .design .inner {
         width: 95%;
         height: 80%;
-        background-color: var(--main_color1);
+        /* background-color: var(--main_color1); */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -540,7 +543,11 @@
         padding: 3rem;
         box-sizing: border-box;
         border-radius: 30px;
-        border: 3px solid var(--main_color4);
+        /* border: 3px solid var(--main_color4); */
+    }
+
+    .design .inner li {
+        color: var(--sub_color);
     }
     
     .design .textBox {
@@ -564,7 +571,7 @@
         border-radius: 20px;
     }
     
-    .design .imgBox li.img1 {
+    .design .imgBox li.img2 {
         background: url(./../img/container/ai3.png);
         transform: translateY(-50%) rotate(5deg);
         z-index: 1;
@@ -573,7 +580,7 @@
         background-position: center;
     }
     
-    .design .imgBox li.img2 {
+    .design .imgBox li.img3 {
         background: url(./../img/container/ai4.png);
         transform: translateY(-50%) rotate(-5deg);
         z-index: 2;
@@ -583,7 +590,7 @@
         
     }
     
-    .design .imgBox li.img3 {
+    .design .imgBox li.img4 {
         background: url(./../img/container/ai5.png);
         transform: translateY(-50%) rotate(7deg);
         z-index: 3;
@@ -592,7 +599,7 @@
         background-position: center;
     }
     
-    .design .imgBox li.img4 {
+    .design .imgBox li.img5 {
         background: url(./../img/container/ai6.png);
         transform: translateY(-50%) rotate(-7deg);
         z-index: 4;
@@ -601,7 +608,7 @@
         background-position: center;
     }
     
-    .design .imgBox li.img5 {
+    .design .imgBox li.img6 {
         background: url(./../img/container/ai7.png);
         transform: translateY(-50%) rotate(0deg);
         z-index: 5;
@@ -610,13 +617,14 @@
         background-position: center;
     }
 
-    .design .imgBox li.img6 {
+    .design .imgBox li.img1, .design .imgBox li.img7 {
         opacity: 0;
     }
 
     .design .textBox h3 {
         font-size: 3.5rem;
         text-transform: uppercase;
+        color: var(--sub_color);
     }
     
     .design .textBox h3 span {

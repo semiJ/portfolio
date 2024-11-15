@@ -1,7 +1,7 @@
 $(function(){
     let baseline = -200;
 
-    let welcome = $("#welcome").offset().top + baseline;
+    let welcome = $(".welcome").offset().top + baseline;
     let aboutme = $(".aboutme").offset().top + baseline;
     let bi = $(".bi").offset().top + baseline;
     let coding = $(".coding").offset().top + baseline;
@@ -30,16 +30,36 @@ $("header li").on("click",function(){
 
 
 // main 영역
-// welcome ain
-    $(".ani")
-        .find(".st0") 
-        .each(function (index, path) {
-            let length = path.getTotalLength();
-            console.log(length);
+gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelectorAll(".upSection");
+    let scTl = gsap.timeline({
+        scrollTrigger : {
+            trigger: "#main",
+            pin: true,
+            scrub: 1,
+            start: "top top",
+            end: "+=800%",
+            markers: true,
+        }
     });
 
+scTl.from(sections, {
+    Y: "400%",
+    duration:"10",
+    ease: "none",
+    stagger:"3",
+    opacity: "1"
+});
+scTl.to(sections, {
+    Y:"0"
+});
 
-// coding
+// welcome ain
+    
+
+
+// coding 영역
     $(".codingArea ol li").on("click", function(){
         i = $(this).index();
 
@@ -62,8 +82,8 @@ $("header li").on("click",function(){
             trigger: ".coding",
             pin: true,
             scrub: 1,
-            start: "rigth rigth",
-            end: "+=400%", // 시작부분에서 400%까지 스크롤한 후 종료
+            start: "top top",
+            end: "+=800%",
             markers: false,
         }
     });
@@ -104,14 +124,13 @@ $("header li").on("click",function(){
 
     gsap.registerPlugin(ScrollTrigger);
     let upBox = document.querySelectorAll(".upBox");
-    let nextText = document.querySelectorAll(".nextText");
     let tl = gsap.timeline({
         scrollTrigger : {
             trigger: ".design",
             pin: true,
-            scrub: 3,
+            scrub: 1,
             start: "top top",
-            end: "+=400%", // 시작부분에서 400%까지 스크롤한 후 종료
+            end: "+=800%",
             markers: false,
         }
     });
@@ -120,7 +139,7 @@ $("header li").on("click",function(){
         y: "400%",
         duration:"10",
         ease: "none",
-        stagger:"10",
+        stagger:"5",
         opacity: "0"
     });
     tl.to(upBox, {
