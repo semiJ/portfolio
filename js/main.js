@@ -55,12 +55,6 @@ $("header li").on("click",function(){
         $(".codingArea li").eq(i).addClass("codingOrderedList");
     });
 
-    $(".codingArea ol li").on("click", function(){
-        i = $(this).index();
-
-        stop.animate({"opacity":"1"});
-    });
-
     gsap.registerPlugin(ScrollTrigger);
     let codingBox = document.querySelectorAll(".codingBox");
     let cB = gsap.timeline({
@@ -86,8 +80,31 @@ $("header li").on("click",function(){
     });
 
 // Design
+    $(".inner ol li").on("click", function(){
+        i = $(this).index();
+
+        $(".inner .textBox li").removeClass("codingative");
+        $(".inner .textBox li").eq(i).addClass("codingative");
+    });
+
+
+    $(".inner ol li").on("click", function(){
+        i = $(this).index();
+
+        $(".inner li").removeClass("codingOrderedList");
+        $(".inner li").eq(i).addClass("codingOrderedList");
+    });
+
+    $(".inner ol li").on("click", function(){
+        i = $(this).index();
+
+        $(".imgBox li").removeClass("designView");
+        $(".imgBox li").eq(i).addClass("designView");
+    });
+
     gsap.registerPlugin(ScrollTrigger);
     let upBox = document.querySelectorAll(".upBox");
+    let nextText = document.querySelectorAll(".nextText");
     let tl = gsap.timeline({
         scrollTrigger : {
             trigger: ".design",

@@ -385,8 +385,6 @@
         overflow: hidden;
         /* background-color: var(--main_color2); */
         position: relative;
-        padding: 8rem 6rem;
-        box-sizing: border-box;
     }
 
     .coding .codingArea {
@@ -524,6 +522,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
     }
 
     .design li {
@@ -541,6 +540,7 @@
         padding: 3rem;
         box-sizing: border-box;
         border-radius: 30px;
+        border: 3px solid var(--main_color4);
     }
     
     .design .textBox {
@@ -614,12 +614,12 @@
         opacity: 0;
     }
 
-    .design .textBox h2 {
+    .design .textBox h3 {
         font-size: 3.5rem;
         text-transform: uppercase;
     }
     
-    .design .textBox h2 span {
+    .design .textBox h3 span {
         font-size: 7rem;
         display: block;
         margin-left: 5rem;
@@ -634,18 +634,30 @@
     .design .textBox li {
         line-height: 2;
         position: relative;
-        color: var(--main_color4);
+        font-size: 1.5rem;
     }
-    
-    .design .textBox li::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        background-color: var(--main_color4);
-        position: absolute;
-        left: -20px;
-        top: 40%;
-        border-radius: 50%
+
+    .design ol.codingOrderedList {
+        color: var(--main_color3);
+    }
+
+    .design ol li span {
+        opacity: 0;
+    }
+
+    .design ol li.codingOrderedList {
+        color: var(--main_color3);
+    }
+
+    .design ol .codingOrderedList span {
+        opacity: 1;
+        transform: translateX(-20px);
+        transition: 1s;
+        color: var(--main_color3);
+    }
+
+    .designView {
+        opacity: 1;
     }
 
     /* /section Design */
