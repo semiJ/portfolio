@@ -385,135 +385,115 @@
     .coding {
         width: 100%;
         height: 100vh;
-        overflow: hidden;
-        /* background-color: var(--main_color2); */
-        position: relative;
-    }
-
-    .coding .codingArea {
+        color: var(--main_color_f);
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
     }
 
-    .codingArea ol {
-        position: absolute;
-        left: 3%;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: var(--last_middle_size);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+    .coding li {
         cursor: pointer;
+    }
+    
+    .coding .codingArea {
+        width: 95%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 3rem;
+        box-sizing: border-box;
+        border-radius: 30px;
+        background-color: var(--main_color1);
+    }
+
+    .coding .codingArea li {
         color: var(--sub_color);
     }
+    
+    .coding .codingDetail {
+        width: 60%;
+        object-fit: cover;
+        position: relative;
+        background-color: var(--sub_color1);
+    }
 
-    .codingArea ol.codingOrderedList {
+    .coding .codingBox {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: var(--main_color1);
+    }
+
+    .coding .codingThumbnail {
+        width: 450px;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .coding .codingDetail li {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        opacity: 1;
+        border-radius: 20px;
+    }
+
+    .codingDetail .codingList {
+        width: 100%;
+        height: 100%;
+    }
+
+    .coding .textBox {
+        width: 40%;
+    }
+
+    .coding .textBox h3 {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        color: var(--sub_color);
+    }
+    
+    .coding .textBox h3 span {
+        font-size: 7rem;
+        display: block;
+        margin-left: 5rem;
+        color: var(--main_color4);
+    }
+    
+    .coding .textBox ul {
+        font-size: var(--last_middle_size);
+        margin-left: 4rem;
+    }
+    
+    .coding .textBox li {
+        line-height: 2;
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    .coding ol.codingOrderedList {
         color: var(--main_color3);
     }
 
-    .codingArea ol li span {
+    .coding ol li span {
         opacity: 0;
     }
 
-    .codingArea ol li.codingOrderedList {
+    .coding ol li.codingOrderedList {
         color: var(--main_color3);
     }
 
-    .codingArea ol .codingOrderedList span {
+    .coding ol .codingOrderedList span {
         opacity: 1;
         transform: translateX(-20px);
         transition: 1s;
         color: var(--main_color3);
     }
-
-    .codingDetail {
-        width: 90%;
-        height: 90%;
-    }
-
-    .codingDetail li {
-        width: 80%;
-        height: 70%;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        left: 60%;
-        top: 50%;
-        transform: translate(-60%, -50%);
-        background-color: var(--main_color1);
-        /* box-shadow: 9px 9px 10px var(--main_color1); */
-        border: 1px solid var(--main_color3);
-        border-radius: 50px;
-        padding: 4rem;
-        gap: 10px;
-        box-sizing: border-box;
-        opacity: 0.5;
-    }
-
-    .codingDetail li .codingList {
-        width: 40%;
-        height: 100%;
-        /* background-color: var(--main_color1); */
-        padding: 5rem;
-        border-radius: 50px;
-        box-sizing: border-box;
-        line-height: 300%;
-    }
-
-    .codingList h3 {
-        font-size: var(--last_big_size);
-    }
-    
-    .codingList p {
-        font-size: var(--last_middle_size);
-        margin: 1rem 0px;
-    }
-
-    .codingList > dl > dt {
-        font-size: var(--last_big_size);
-        font-weight: bold;
-    }
-
-    .codingList > dl > dd {
-        font-size: var(--first_middle_size);
-        margin: 1rem 0px;
-    }
-
-    .codingDetail li .codingThumbnail {
-        width: 60%;
-        /* background-color: var(--main_color1); */
-        padding: 2rem;
-        border-radius: 30px;
-    }
-
-    .codingBtn {
-        display: flex;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .codingBtn a {
-        display: block;
-        padding: 0.2rem;
-        font-size: var(--last_middle_size);
-        font-weight: bold;
-        background-color: var(--main_color2);
-        border: 1px solid var(--main_color3);
-        border-radius: 10px;
-        width: 50%;
-        text-align: center;
-        color: var(--main_color_f);
-    }
-
-    .codingThumbnail img {
-        width: 90%;
-        height: 100%;
-        object-fit: cover;
-        transform: translateX(8%);
-    }
-
     /* /section Coding */
 
     /* section Design */
@@ -521,7 +501,7 @@
     .design {
         width: 100%;
         height: 100vh;
-        color: #fff;
+        color: var(--main_color_f);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -535,7 +515,6 @@
     .design .inner {
         width: 95%;
         height: 80%;
-        /* background-color: var(--main_color1); */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -543,7 +522,6 @@
         padding: 3rem;
         box-sizing: border-box;
         border-radius: 30px;
-        /* border: 3px solid var(--main_color4); */
     }
 
     .design .inner li {
@@ -617,7 +595,7 @@
         background-position: center;
     }
 
-    .design .imgBox li.img1, .design .imgBox li.img7 {
+    .design .imgBox li.img7 {
         opacity: 0;
     }
 
@@ -662,10 +640,6 @@
         transform: translateX(-20px);
         transition: 1s;
         color: var(--main_color3);
-    }
-
-    .designView {
-        opacity: 1;
     }
 
     /* /section Design */
