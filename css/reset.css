@@ -1,0 +1,50 @@
+/* reset */
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+dl,
+dd,
+dt {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+h2, h3, span, dt, ol {
+    font-family: 'Katuri';
+}
+
+p, dd, ul {
+    font-family: 'omyu_pretty';
+}
+
+/* 보이지 않아도 되는 글자들 <span 또는 h2>숨기기 */
+html .h_hide {
+    display: none;
+}
+
+/* 오뮤 다예쁨체 */
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 엄마까투리체 */
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

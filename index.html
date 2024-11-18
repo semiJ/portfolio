@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>전세미 개인홈페이지</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.transform2d.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="image/ico" href="./img/header/AnyConv.com__main_logo.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header 영역 -->
+    <header>
+        <h1>
+            <a href="index.html">
+                <span class="h_hide">전세미 개인 홈페이지 로고</span>
+                <img src="img/header/main_logo.svg" alt="메인로고">
+            </a>
+        </h1>
+        <nav>
+            <ul class="mainMenu">
+                <li><a href="#">welcome</a></li>
+                <li><a href="#">Aboutme</a></li>
+                <li><a href="#">Coding</a></li>
+                <li><a href="#">Design</a></li>
+            </ul>
+            <ul class="menuBar">
+                <li class="bar01"><span class="h_hide">메뉴상단</span></li>
+                <li class="bar02"><span class="h_hide">메뉴중간</span></li>
+                <li class="bar03"><span class="h_hide">메뉴하단</span></li>
+            </ul>
+           <div class="subBack">
+                <ul class="subMenu">
+                    <li><a href="#">welcome</a></li>
+                    <li><a href="#">Aboutme</a></li>
+                    <li><a href="#">Coding</a></li>
+                    <li><a href="#">Design</a></li>
+                </ul>
+           </div>
+        </nav>
+    </header>
+    <!-- /header 영역 -->
+
+    <!-- main 영역 -->
+    <main id="main">
+        <!-- section 01 Welcome -->
+        <section class="welcome">
+            <h2>
+                안녕하세요<br>
+                항상 도전하는<br>
+                <span class="publisher">웹</span>
+                <span>퍼</span>
+                <span>블</span>
+                <span>리</span>
+                <span>셔</span><br>
+                <span>전세미</span>입니다.
+            </h2>
+            <div class="ain">
+                <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            viewBox="0 0 471.28 459.89" style="enable-background:new 0 0 471.28 459.89;" xml:space="preserve">
+                <style type="text/css">
+	            .st0{fill:none;stroke:#ED1C24;stroke-width:15;stroke-miterlimit:10;}
+                </style>
+                <path class="st0" d="M230.64,131c0,0-163.14-199.5-203.64,0c-43.61,214.8,203.64,310,203.64,310s218.5-64.38,223.3-287.66
+                    c0.4-18.47-3.13-36.8-10.51-53.74C418.85,43.26,349.03-66.37,230.64,131z"/>
+                </svg>
+            </div>
+            <div class="scroll">
+                <p>SCROLL</p>
+                <div class="scrollBar">
+                  <div class="circle"><span class="h_hide">스크롤 안쪽 배경</span></div>
+                </div>
+              </div>
+        </section>
+        <!-- /section 01 Welcome -->
+        <!-- section 02 Aboutme -->
+        <section class="aboutme">
+            <h2 class="h_hide">전세미 소개</h2>
+            <div class="info">
+                <!-- aboutme 왼쪽 영역 -->
+                <div class="infoleft">
+                    <dl>
+                        <dt>이름</dt>
+                        <dd>전세미</dd>
+                    </dl>
+                    <dl>
+                        <dt>생년월일</dt>
+                        <dd>19950404</dd>
+                    </dl>
+                    <dl>
+                        <dt>수료내역</dt>
+                        <dd>2024.07 ~ 2024.12 MBC아카데미 웹디자인&퍼블리싱 과정 수료</dd>
+                    </dl>
+                    <dl>
+                        <dt>경력</dt>
+                        <dd>
+                            <ul class="career">
+                                <li>
+                                    2017.01 ~ 2017.11
+                                    <p>(주) 모닝인 [띵동] cs 운영팀</p> 
+                                </li>
+                                <li>
+                                    2017.12 ~ 2019.08
+                                    <p>(주) 허니비즈 [띵동] cs 운영팀</p>
+                                </li>
+                                <li>
+                                    2019.09 ~ 2020.11
+                                    <p>(주) 허니비즈 [띵동] 사내 프로그램 (TMS) 기획 및 PM 개발팀</p>
+                                </li>
+                                <li>
+                                    2021.08 ~ 2024.02
+                                    <p>(주) 더파이러츠 [인어교주해적단] UX/UI 기획 개발본부 기획팀</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>스킬 및 협업툴</dt>
+                        <dd>
+                            <ul class="skill">
+                                <li><img src="img/container/html.png" alt="html 아이콘"></li>
+                                <li><img src="img/container/css.png" alt="css 아이콘"></li>
+                                <li><img src="img/container/jQuery.png" alt="jQuery 아이콘"></li>
+                                <li><img src="img/container/js.png" alt="javascript 아이콘"></li>
+                                <li><img src="img/container/vs.png" alt="VScode 아이콘"></li>
+                                <li><img src="img/container/ps.png" alt="포토샵 아이콘"></li>
+                                <li><img src="img/container/Ai.png" alt="일러스트 아이콘"></li>
+                                <li><img src="img/container/figma.svg" alt="피그마 아이콘"></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- /aboutme 왼쪽 영역 -->
+                <!-- aboutme 가운데 영역 -->
+                <div class="infomiddle">
+                    <h3>
+                        Responsibilty <br> <span>&  diligent</span>
+                    </h3>
+                    <p>
+                        책임감과 성실함을 가지고 항상 초심을 잃지 않고,<br>
+                        맡은 일에 끝까지 최선을 다하는 사람이 되고싶습니다.
+                    </p>
+                    <div class="infoImg">
+                        <span class="h_hide">전세미 사진</span>
+                    </div>
+                </div>
+                <!-- /aboutme 가운데 영역 -->
+                <!-- aboutme 오른쪽 영역 -->
+                <div class="inforright">
+                    <h3>로고의 의미</h3>
+                    <div>
+                        <p>
+                            저의 영문 이름에 i가 들어가서 생각을 하다가<br>
+                            많은 아이디어로 디자인을 하고싶다는 생각에 <span>‘ideabank’</span> 라는 단어가 떠올랐고,
+                        </p>
+                        <p>
+                            그 중에 idb를 이용하여 로고를 만들게 되었습니다.
+                        </p>
+                        <p>
+                            i 가 저라고 생각하여 제 주변 사람들이 힘들고 어려울 때 저에게 편하게 기댈 수 있었으면 좋겠어서<br>
+                            양 옆에 db를 i에게 기대는 구조로 로고를 구성했으며,
+                        </p>
+                        <p>
+                            둥글둥글 하게 살고싶다는 의미로 동글동글하게 만들었습니다.
+                        </p>
+                    </div>
+                    <h3>홈페이지 구성</h3>
+                    <div>
+                        <dl>
+                            <dt>사용툴 및 스킬</dt>
+                            <dd>
+                                <ul>
+                                    <li>#vscode</li>
+                                    <li>#포토샵</li>
+                                    <li>#일러스트</li>
+                                    <li>#피그마</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>디자인 컨셉</dt>
+                            <dd>
+                                <ul>
+                                    <li>#따뜻함</li>
+                                    <li>#친근감</li>
+                                    <li>#부드러운</li>
+                                    <li>#신뢰적</li>
+                                    <li>#활동적인</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>컬러</dt>
+                            <dd>
+                                <ul class="colorPalate">
+                                    <li>#feb2b2</li>
+                                    <li>#fa8f8f</li>
+                                    <li>#fc3838</li>
+                                    <li>#fd0000</li>
+                                    <li>#B2D0FE</li>
+                                    <li>#88b8ff</li>
+                                    <li>#61a0fd</li>
+                                    <li>#408dff</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>폰트</dt>
+                            <dd>
+                                <ul class="biFont">
+                                    <li>#엄마까투리체</li>
+                                    <li>#오뮤 다예쁨체</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- /aboutme 오른쪽 영역 -->
+            </div>
+        </section>
+        <!-- /section 02 Aboutme -->
+        <!-- section 04 Coding -->
+        <section class="coding">
+            <h2 class="h_hide">클론 코딩</h2>
+            <!-- 일러스트 버튼 영역 -->
+            <div class="Codinginner">
+                <ul class="codingimgBox">
+                    <!-- 보이는 이미지 -->
+                    <li class="codingBox2 upBox">
+                        <span class="h_hide">코딩영역</span>
+                        <div class="codingThumbnail"><img src="img/container/display.png" alt="썸네일"></div>
+                        <div class="resultLink">
+                            <a href="#">git</a>
+                            <a href="#">결과물</a>
+                        </div>
+                    </li>     
+                    <li class="codingBox3 upBox">
+                        <span class="h_hide">코딩영역</span>
+                        <div class="resultLink">
+                            <a href="#">git</a>
+                            <a href="#">결과물</a>
+                        </div>
+                    </li>
+                    <li class="codingBox4 upBox">
+                        <span class="h_hide">코딩영역</span>
+                        <div class="resultLink">
+                            <a href="#">git</a>
+                            <a href="#">결과물</a>
+                        </div>
+                    </li>
+                    <li class="codingBox5 upBox">
+                        <span class="h_hide">코딩영역</span>
+                        <div class="resultLink">
+                            <a href="#">git</a>
+                            <a href="#">결과물</a>
+                        </div>
+                    </li>
+                    <!-- /보이는 이미지 -->
+                    <!-- 안보이는 이미지 -->
+                    <li class="img7 upBox"><span class="h_hide">빈코딩</span></li>
+                    <!-- /안보이는 이미지 -->
+                </ul>
+                <div class="codingtextBox">
+                    <h3>Clone<span>Coding</span></h3>
+                    <ol>
+                        <li class="codingOrderedList">01 <span>풀무원</span></li>
+                        <li>02 <span>스토리타코</span></li>
+                        <li>03 <span>아몬즈</span></li>
+                        <li>04 <span>커버링</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!-- /section 04 Coding -->
+        <!-- section 05 Design -->
+        <section class="aiDesign">
+            <h2 class="h_hide">디자인 결과물</h2>
+            <!-- 일러스트 버튼 영역 -->
+            <h3>Illustration<span>Design</span></h3>
+            <div class="inner">
+                <ul class="slide_list swiperWrapper">
+                    <!-- 보이는 이미지 -->
+                    <li class="img2"><span class="h_hide">일러스트이미지</span></li>
+                    <li class="img3"><span class="h_hide">일러스트이미지</span></li>
+                    <li class="img4 swiperSlide"><span class="h_hide">일러스트이미지</span></li>
+                    <li class="img5"><span class="h_hide">일러스트이미지</span></li>
+                    <li class="img6"><span class="h_hide">일러스트이미지</span></li>
+                    <!-- /보이는 이미지 -->
+                </ul>
+            </div>
+        </section>
+        <!-- / section 05 Design -->
+    </main>
+    <!-- /main 영역 -->
+    
+    <!-- footer 영역 -->
+    <footer>
+        <div class="topBtn">
+           <a href="#top">
+            <i class="fa-solid fa-arrow-up">
+                <span class="h_hide">
+                    위로가는버튼
+                </span>
+            </i>
+           </a>
+        </div>
+        <div class="ftContact">
+            <div class="conLeft">
+                <dl>
+                    <dt>연락처</dt>
+                    <dd>010-5744-1230</dd>
+                </dl>
+                <dl>
+                    <dt>이메일</dt>
+                    <dd>95semi04@gmail.com</dd>
+                </dl>
+                <dl>
+                    <dt>kakaoID</dt>
+                    <dd>a-_-a53</dd>
+                </dl>
+                <dl>
+                    <dt>instagram</dt>
+                    <dd>j_950404</dd>
+                </dl>
+            </div>
+            <div class="conRight">
+                <div>
+                    <span>Coding사이트</span>
+                    <span class="ftPlus"><i class="fa-solid fa-plus"></i></span>
+                    <span class="ftXmark"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <ul class="codingLink">
+                    <li><a href="#">풀무원</a></li>
+                    <li><a href="#">스토리타코</a></li>
+                    <li><a href="#">아몬즈</a></li>
+                    <li><a href="#">커버링</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ftCopy">
+            ⓒ 2024. jeonsemi All rights reserved.<br>
+            해당 사이트는 상업용 목적이 아닌 개인 포트폴리오용 개인 사이트입니다.
+        </div>
+    </footer>
+    <!-- /footer 영역 -->
+</body>
+</html>
