@@ -442,8 +442,15 @@
         z-index: 4;
     }
         
-    .coding .codingimgBox li.img5 {
+    .coding .codingimgBox li.img7 {
         opacity: 0;
+    }
+
+    .coding .codingimgBox .resultLink a {
+        padding: var(--size4);
+        box-sizing: border-box;
+        background-color: var(--four_red);
+        color: var(--white);
     }
 
     .coding .codingtextBox {
