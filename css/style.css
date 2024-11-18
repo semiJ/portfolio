@@ -128,6 +128,10 @@
         transition: 1s;
     }
 
+    .viewContros {
+        display: none;
+    }
+
     /* menuBar 서브메뉴 bar */
     .menuBar {
         /* background-color: #eaf;*/
@@ -185,7 +189,7 @@
 
     /* main 영역 */
     /* welcome 영역 */
-    .welcome {
+    #welcome {
         width: 100%;
         height: 100vh;
         overflow: hidden;
@@ -193,7 +197,7 @@
         box-sizing: border-box;
         /* background-color: var(--one_red); */
     }
-    .welcome h2 {
+    #welcome h2 {
         font-size: var(--first_big_size);
         position: absolute;
         left: 10%;
@@ -203,7 +207,7 @@
         font-size: var(--size8);
     }
     
-    .welcome h2 > span {
+    #welcome h2 > span {
         color: var(--three_red);
     }
 
@@ -295,7 +299,7 @@
     /* /welcome 영역*/
 
     /* aboutme */
-    .aboutme {
+    #aboutme {
         width: 100%;
         height: 100vh;
         overflow: hidden;
@@ -376,7 +380,7 @@
     /* /aboutme */
 
     /* coding */
-    .coding {
+    #coding {
         width: 100%;
         height: 100vh;
         overflow: hidden;
@@ -386,11 +390,11 @@
         position: relative;
     }
 
-    .coding li {
+    #coding li {
         cursor: pointer;
     }
     
-    .coding .Codinginner {
+    #coding .Codinginner {
         width: 90%;
         height: 80%;
         background-color: var(--two_red);
@@ -407,7 +411,7 @@
         transform: translate(-50%, -50%);
     }
     
-    .coding .codingimgBox {
+    #coding .codingimgBox {
         width: 50%;
         object-fit: cover;
         padding: var(--size6);
@@ -421,7 +425,7 @@
         height: 100%;
         /* background-color: #eeeeee;/ */
         position: absolute;
-        top: 15%;
+        top: 5%;
     }
 
     .codingThumbnail {
@@ -473,14 +477,14 @@
         display: none;
     }
 
-    .coding .codingtextBox {
+    #coding .codingtextBox {
         width: 50%;
         padding: var(--size6);
         box-sizing: border-box;
         position: relative;
     }
 
-    .coding h3 {
+    #coding h3 {
         font-size: var(--size10);
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
@@ -489,35 +493,35 @@
         top: 15%;
     }
 
-    .coding .codingtextBox h3 span {
+    #coding .codingtextBox h3 span {
         display: block;
         margin-left: var(--size7);
     }
     
-    .coding .codingtextBox ol {
+    #coding .codingtextBox ol {
         font-size: var(--size6);
         position: absolute;
         top: 50%;
     }
     
-    .coding .codingtextBox li {
+    #coding .codingtextBox li {
         line-height: 2;
         font-size: var(--size6);
     }
 
-    .coding ol .codingOrderedList {
+    #coding ol .codingOrderedList {
         color: var(--red);
     }
 
-    .coding ol li span {
+    #coding ol li span {
         opacity: 0;
     }
 
-    .coding ol li.codingOrderedList {
+    #coding ol li.codingOrderedList {
         color: var(--red);
     }
 
-    .coding ol .codingOrderedList span {
+    #coding ol .codingOrderedList span {
         opacity: 1;
         transform: translateX(-20px);
         transition: 1s;
@@ -526,7 +530,7 @@
     /* /coding */
 
     /* aiDesign */
-    .aiDesign {
+    #aiDesign {
         width: 100%;
         height: 100vh;
         position: relative;
@@ -536,7 +540,7 @@
         /* background-color: var(--two_red); */
     }
 
-    .aiDesign h3 {
+    #aiDesign h3 {
         font-size: var(--size10);
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
@@ -545,12 +549,12 @@
         top: 10%;
     }
 
-    .aiDesign > h3 span {
+    #aiDesign > h3 span {
         display: block;
         margin-left: var(--size10);
     }
 
-    .aiDesign .inner {
+    #aiDesign .inner {
         width: 90%;
         height: 90%;
         overflow: hidden;
