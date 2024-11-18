@@ -374,8 +374,6 @@
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
         color: transparent;
-
-        
     }
 
     .infomiddle h3 span {
@@ -406,17 +404,92 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        border-radius: 20px;
     }
         
     /* /infomiddle 영역 */
 
-    /* inforright 영역 */
+    /* inforight 영역 */
 
-    .inforright {
+    .inforight {
+        /* background-color: var(--two_red); */
+        overflow: hidden;
+    }
+
+    .inforight h3 {
+        font-size: var(--size7);
+        color: var(--dark_gray);
+    }
+
+    .inforight .logoText, .inforight .homeSkill {
+        margin: var(--size3) 0px;
+    }
+
+    .inforight .logoText p {
+        line-height: 35px;
+    }
+
+    .inforight .logoText p span {
+        display: inline-block;
+        color: var(--red);
+        font-size: var(--size6);
+        text-transform: uppercase;
+    }
+
+    .homeSkill dt {
+        font-size: var(--size5);
+        color: var(--dark_gray);
+        margin: var(--size2);
+    }
+
+    .homeSkill ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .homeSkill ul li {
+        font-size: var(--size4);
+        padding: var(--size2);
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+
+    .colorPalate li {
+        border-radius: 50px;
+        text-align: center;
+        color: var(--white);
+        font-weight: bolder;
+    }
+
+    .colorPalate li:nth-child(1){
+        background-color: var(--one_red);
+    }
+    
+    .colorPalate li:nth-child(2){
         background-color: var(--two_red);
     }
+
+    .colorPalate li:nth-child(3){
+        background-color: var(--three_red);
+    }
+
+    .colorPalate li:nth-child(4){
+        background-color: var(--four_red);
+    }
+
+    .colorPalate li:nth-child(5){
+        background-color: var(--red);
+    }
+
+    .aboutFont li:nth-child(1) {
+        font-family: 'Katuri';
+    }
+
+    .aboutFont li:nth-child(2) {
+        font-family: 'omyu_pretty';
+    }
         
-    /* /inforright 영역 */
+    /* /inforight 영역 */
 
     /* /aboutme */
 

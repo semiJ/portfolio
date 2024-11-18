@@ -56,7 +56,7 @@ $(function(){
                 pin: true,
                 scrub: 3,
                 start: "top top",
-                end: "+=800%",
+                end: "+=600%",
                 markers: false,
             }
         });
@@ -68,12 +68,10 @@ $(function(){
             stagger:"5",
             opacity: "0",
         });
-        
+
         tl.to(upBox, {
             y: "0"
         });
-
-
     // aiDesign
 
     
