@@ -63,7 +63,7 @@ $(function(){
         opacity: "0"
     });
     tl.to(upBox, {
-        y:"0"
+        y: "0"
     });
 
 

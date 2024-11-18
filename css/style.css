@@ -92,6 +92,10 @@
         box-sizing: border-box;
     }
 
+    .mainMenu a:hover {
+        color: var(--three_red);
+    }
+
     /* subMenu 서브메뉴 스타일*/
 
     .subBack {
@@ -411,46 +415,62 @@
         border-radius: 20px;
         position: relative;
     }
-    
-    .coding .codingimgBox img {
+
+    .codingimgBox li {
+        width: 100%;
+        height: 100%;
+        /* background-color: #eeeeee;/ */
+        position: absolute;
+        top: 15%;
+    }
+
+    .codingThumbnail {
+        width: 100%;
+    }
+
+    .codingThumbnail img {
         width: 100%;
         object-fit: cover;
         position: absolute;
+        top: 0px;
     }
 
-    .coding .codingimgBox li.img1 {
-        top: 50%;
-        transform: translateY(-50%) rotate(5deg);
-        z-index: 1;
-    }
-    
-    .coding .codingimgBox li.img2 {
-        top: 50%;
-        transform: translateY(-50%) rotate(-5deg);
-        z-index: 2;
-    }
-    
-    .coding .codingimgBox li.img3 {
-        top: 50%;
-        transform: translateY(-50%) rotate(7deg);
-        z-index: 3;
-    }
-    
-    .coding .codingimgBox li.img4 {
-        top: 50%;
-        transform: translateY(-50%) rotate(-7deg);
-        z-index: 4;
-    }
-        
-    .coding .codingimgBox li.img7 {
-        opacity: 0;
+    .codingThumbnail .img1 {
+        transform: rotate(-5deg);
     }
 
-    .coding .codingimgBox .resultLink a {
+    .codingThumbnail .img2 {
+        transform: rotate(5deg);
+    }
+
+    .codingThumbnail .img3 {
+        transform: rotate(-9deg);
+    }
+
+    .codingThumbnail .img4 {
+        transform: rotate(0deg);
+    }
+
+    .resultLink {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .resultLink a {
+        width: 4em;
         padding: var(--size4);
         box-sizing: border-box;
-        background-color: var(--four_red);
+        display: block;
+        background-color: #ff0000;
+        font-size: var(--size5);
+        border-radius: 15px;
+        text-align: center;
         color: var(--white);
+    }
+
+    .codingBox7 {
+        display: none;
     }
 
     .coding .codingtextBox {
@@ -522,7 +542,7 @@
         -webkit-text-stroke: 3px var(--red); 
         color: transparent;
         position: absolute;
-        top: 15%;
+        top: 10%;
     }
 
     .aiDesign > h3 span {
@@ -540,6 +560,7 @@
 
     .slide_list {
         width: 100%;
+        height: 450px;
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -550,11 +571,11 @@
 
     .slide_list li {
         width: 100%;
-        height: 600px;
+        height: 100%;
         border-radius: 20px;
-        transform: scale(0.7);
+        /* transform: scale(0.7); */
         transition: all 0.3s;
-        opacity: 0.5;
+        /* opacity: 0.5; */
         position: relative;
     }
 
