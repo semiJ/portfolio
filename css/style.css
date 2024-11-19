@@ -724,16 +724,8 @@
         width: 100%;
         height: 100%;
         border-radius: 20px;
-        transform: scale(0.7);
         transition: all 0.3s;
-        opacity: 0;
         position: relative;
-    }
-
-    .slide_list li.swiperWrapper {
-        transform: rotateY(360deg) scale(1);
-        opacity: 1;
-        transition: 2s;
     }
 
     .slide_list .img2 {

@@ -55,9 +55,9 @@ $(function(){
 
     gsap.registerPlugin(ScrollTrigger);
 
-        let upBox = document.querySelectorAll(".upBox");
+        const upBox = document.querySelectorAll(".upBox");
 
-        let tl = gsap.timeline({
+        const tl = gsap.timeline({
             scrollTrigger : {
                 trigger: "#coding",
                 pin: true,
@@ -69,7 +69,7 @@ $(function(){
         });
 
         tl.from(upBox, {
-            y: "400%",
+            y: "200%",
             duration:"10",
             ease: "none",
             stagger:"5",
@@ -91,15 +91,31 @@ $(function(){
     });
 
     // aiDesign
+    gsap.registerPlugin(ScrollTrigger);
 
-    $(window).on("scroll", function(){
-        let dsg = $(this).scrollTop();
-        // console.log(abou); // 스크롤 위치 확인
-        if(dsg >= aiDesign && dsg < ft) {
-            $(".slide_list li").addClass("swiperWrapper");
-        } else {
-            $(".slide_list li").removeClass("swiperWrapper");
-        };
+    const upImg = document.querySelectorAll(".upImg");
+   
+    const src = gsap.timeline({
+        scrollTrigger : {
+            trigger: "#aiDesign",
+            pin: true,
+            scrub: 3,
+            start: "top top",
+            end: "+=600%",
+            markers: false,
+        }
+    });
+
+    src.from(upImg, {
+        y: "200%",
+        duration:"10",
+        ease: "none",
+        stagger:"5",
+        opacity: "0",
+    });
+
+    src.to(upImg, {
+        y: "0"
     });
 
     // /aiDesign
