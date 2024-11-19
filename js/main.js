@@ -51,6 +51,7 @@ $(function(){
             $(".inforight").removeClass("moverRight");
         };
     });
+
     //coding
 
     gsap.registerPlugin(ScrollTrigger);
@@ -80,6 +81,45 @@ $(function(){
             y: "0"
         });
 
+        gsap.to("#coding .codingList01", {
+            scrollTrigger: {
+              trigger: "#coding .codingBox2",
+              start:"-100% top",
+              toggleClass:{targets:'#coding .codingList01',className:'codingOrderedList'},
+              scrub: 2,
+            }
+        });
+          
+        gsap.to("#coding .codingList02", {
+            scrollTrigger: {
+              trigger: "#coding .codingBox3",
+              start:"-100% top",
+              toggleClass:{targets:'#coding .codingList02',className:'codingOrderedList'},
+              scrub: 2,
+            }
+        });
+          
+        gsap.to("#coding .codingList03", {
+            scrollTrigger: {
+              trigger: "#coding .codingBox4",
+              start:"-100% top",
+              toggleClass:{targets:'#coding .codingList03',className:'codingOrderedList'},
+              scrub: 2,
+            }
+        });
+
+        gsap.to("#coding .codingList04", {
+            scrollTrigger: {
+              trigger: "#coding .codingBox5",
+              start:"-100% top",
+              toggleClass:{targets:'#coding .codingList04',className:'codingOrderedList'},
+              scrub: 2,
+            }
+        });
+
+
+
+
         
     $("#coding .codingtextBox ol li").on("click", function(){
         let i = $(this).index();
@@ -100,7 +140,7 @@ $(function(){
             scrub: 3,
             start: "top top",
             end: "+=800%",
-            markers: true,
+            markers: false,
         }
     });
 
