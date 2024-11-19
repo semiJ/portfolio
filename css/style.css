@@ -31,7 +31,7 @@
     header {
         background-color: transparent;
         width: 100%;
-        padding: var(--size2);
+        padding: var(--size3);
         display: flex;
         justify-content: space-between;
         position: fixed;
@@ -136,7 +136,7 @@
     .menuBar {
         /* background-color: #eaf;*/
         width: 30px;
-        height: 20px;
+        height: 18px;
         position: relative;
         top: 0px;
         cursor: pointer;
@@ -261,27 +261,30 @@
      /*scroll*/
     .scroll {
         position: absolute;
-        right: 100px;
-        bottom: 100px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         gap: 10px;
+        color: var(--red);
     }
     .scroll p {
         color: #fff;
         font-size: var(--size4);
         font-weight: bold;
+        color: var(--red);
     }
     .scrollBar {
         width: 6px;
         height: 20px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: var(--red);
         border-radius: 2.5px;
     }
     .circle {
         width: 100%;
         height: 6px;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: var(--one_red);
         animation: move 2s infinite;
     }
     @keyframes move {

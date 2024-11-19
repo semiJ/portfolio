@@ -13,7 +13,7 @@ $(function(){
     $(window).on("scroll", function(){
         let sc = $(this).scrollTop();
 
-        if(sc >= welcome) {
+        if(sc >= coding) {
             $("header").addClass("on");
         } else {
             $("header").removeClass("on");
@@ -41,6 +41,7 @@ $(function(){
 
     let viewBox = document.querySelector("#welcome img");
     let txt = document.querySelector("#welcome .welcomeText");
+    let scroll = document.querySelector("#welcome .scroll");
 
     let te = gsap.timeline({
         scrollTrigger: {
@@ -53,20 +54,24 @@ $(function(){
             start: "top top",
 
             end: "bottom top",
-            markers: true,
+            markers: false,
         },
 
     });
 
     te.to(txt, { 
         opacity: "1",
-        duration: "8",
+        duration: "2",
     });
 
     te.to(viewBox, {
         scale: "0.7",
-        duration: "8",
-        opacity: "0.7",
+        duration: "2",
+        opacity: "0.5",
+    })
+
+    te.to(scroll, {
+        opacity: "0",
     })
     // /welcome
 
@@ -184,8 +189,8 @@ $(function(){
     upImg.forEach(function (upImg, index) {
     
         scr.from(upImg, {
-            y: "150%",
-            duration:"5",
+            y: "50%",
+            duration:"3",
             ease: "none",
             stagger: 0.5,
             opacity: 0,
@@ -207,7 +212,7 @@ $(function(){
         let viewTop = $(this).scrollTop();
         // console.log(viewTop);
 
-        if(viewTop >= 100) {
+        if(viewTop >= coding) {
             $(".topBtn").addClass("ftTopbtn");
         } else {
             $(".topBtn").removeClass("ftTopbtn");
