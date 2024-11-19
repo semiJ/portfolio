@@ -84,36 +84,40 @@ $(function(){
         gsap.to("#coding .codingList01", {
             scrollTrigger: {
               trigger: "#coding .codingBox2",
-              start:"-100% top",
+              start: "-100% top",
               toggleClass:{targets:'#coding .codingList01',className:'codingOrderedList'},
               scrub: 2,
+              markers: true,
             }
         });
           
         gsap.to("#coding .codingList02", {
             scrollTrigger: {
               trigger: "#coding .codingBox3",
-              start:"-100% top",
+              start: "-200% top",
               toggleClass:{targets:'#coding .codingList02',className:'codingOrderedList'},
               scrub: 2,
+              markers: true,
             }
         });
           
         gsap.to("#coding .codingList03", {
             scrollTrigger: {
               trigger: "#coding .codingBox4",
-              start:"-100% top",
+              start: "-300% top",
               toggleClass:{targets:'#coding .codingList03',className:'codingOrderedList'},
               scrub: 2,
+              markers: true,
             }
         });
 
         gsap.to("#coding .codingList04", {
             scrollTrigger: {
               trigger: "#coding .codingBox5",
-              start:"-100% top",
+              start: "-400% top",
               toggleClass:{targets:'#coding .codingList04',className:'codingOrderedList'},
               scrub: 2,
+              markers: true,
             }
         });
 
@@ -150,10 +154,10 @@ $(function(){
     
         scr.from(upImg, {
             y: "200%",
-            duration:"10",
+            duration:"5",
             ease: "none",
-            stagger:"5",
-            opacity: "0",
+            stagger: 0.5,
+            opacity: 0,
          });
 
          scr.to(upImg, 1, {
