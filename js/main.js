@@ -36,12 +36,47 @@ $(function(){
         $("html, body").stop().animate({scrollTop: target}, 1200);
     });
 
+    //welcome
+    gsap.registerPlugin(ScrollTrigger);
+
+    let viewBox = document.querySelector("#welcome img");
+    let txt = document.querySelector("#welcome .welcomeText");
+
+    let te = gsap.timeline({
+        scrollTrigger: {
+
+            trigger: "#welcome",
+            pin: true,
+            // opacity: 0,
+
+            scrub: 3,
+            start: "top top",
+
+            end: "bottom top",
+            markers: true,
+        },
+
+    });
+
+    te.to(txt, { 
+        opacity: "1",
+        duration: "8",
+    });
+
+    te.to(viewBox, {
+        scale: "0.7",
+        duration: "8",
+        opacity: "0.7",
+    })
+    // /welcome
+
+
     // aboutme
     $(window).on("scroll", function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= aboutme && abou < coding) {
+        if(abou >= aboutme && abou < aiDesign) {
             $(".info").addClass("infoview");
             $(".infoleft").addClass("moveLeft");
             $(".inforight").addClass("moverRight");
@@ -87,7 +122,7 @@ $(function(){
               start: "-100% top",
               toggleClass:{targets:'#coding .codingList01',className:'codingOrderedList'},
               scrub: 2,
-              markers: true,
+              markers: false,
             }
         });
           
@@ -97,7 +132,7 @@ $(function(){
               start: "-200% top",
               toggleClass:{targets:'#coding .codingList02',className:'codingOrderedList'},
               scrub: 2,
-              markers: true,
+              markers: false,
             }
         });
           
@@ -107,7 +142,7 @@ $(function(){
               start: "-300% top",
               toggleClass:{targets:'#coding .codingList03',className:'codingOrderedList'},
               scrub: 2,
-              markers: true,
+              markers: false,
             }
         });
 
@@ -117,13 +152,9 @@ $(function(){
               start: "-400% top",
               toggleClass:{targets:'#coding .codingList04',className:'codingOrderedList'},
               scrub: 2,
-              markers: true,
+              markers: false,
             }
         });
-
-
-
-
         
     $("#coding .codingtextBox ol li").on("click", function(){
         let i = $(this).index();
@@ -143,7 +174,7 @@ $(function(){
             pin: true,
             scrub: 3,
             start: "top top",
-            end: "+=800%",
+            end: "+=600%",
             markers: false,
         }
     });
@@ -153,7 +184,7 @@ $(function(){
     upImg.forEach(function (upImg, index) {
     
         scr.from(upImg, {
-            y: "200%",
+            y: "150%",
             duration:"5",
             ease: "none",
             stagger: 0.5,
