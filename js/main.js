@@ -1,4 +1,7 @@
 $(function(){
+
+    gsap.registerPlugin(ScrollTrigger);
+
     // header 영역  
     let baseline = -600;
 
@@ -36,8 +39,14 @@ $(function(){
         $("html, body").stop().animate({scrollTop: target}, 1200);
     });
 
+    $("header .subMenu li").on("click",function(){
+        let i = $(this).index();
+        let target = $("#main section").eq(i).offset().top;
+        
+        $("html, body").stop().animate({scrollTop: target}, 1200);
+    });
+
     //welcome
-    gsap.registerPlugin(ScrollTrigger);
 
     let viewBox = document.querySelector("#welcome img");
     let txt = document.querySelector("#welcome .welcomeText");
@@ -94,8 +103,6 @@ $(function(){
     });
 
     //coding
-
-    gsap.registerPlugin(ScrollTrigger);
 
         const upBox = document.querySelectorAll(".upBox");
 
@@ -172,7 +179,6 @@ $(function(){
     });
 
     // aiDesign
-    gsap.registerPlugin(ScrollTrigger);
 
     const scr = gsap.timeline({
         scrollTrigger : {
