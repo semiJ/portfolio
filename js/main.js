@@ -93,30 +93,36 @@ $(function(){
     // aiDesign
     gsap.registerPlugin(ScrollTrigger);
 
-    const upImg = document.querySelectorAll(".upImg");
-   
-    const src = gsap.timeline({
+    const scr = gsap.timeline({
         scrollTrigger : {
             trigger: "#aiDesign",
             pin: true,
             scrub: 3,
             start: "top top",
-            end: "+=600%",
-            markers: false,
+            end: "+=800%",
+            markers: true,
         }
     });
 
-    src.from(upImg, {
-        y: "200%",
-        duration:"10",
-        ease: "none",
-        stagger:"5",
-        opacity: "0",
-    });
+    const upImg = document.querySelectorAll(".slide_list .upImg");
 
-    src.to(upImg, {
-        y: "0"
-    });
+    upImg.forEach(function (upImg, index) {
+    
+        scr.from(upImg, {
+            y: "200%",
+            duration:"10",
+            ease: "none",
+            stagger:"5",
+            opacity: "0",
+         });
+
+         scr.to(upImg, 1, {
+            y: "0",
+            delay: (index + 1) * 0.7,
+            opacity: 1,
+            });
+
+        });
 
     // /aiDesign
     
