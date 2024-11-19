@@ -315,11 +315,8 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
             overflow: hidden;
+            opacity: 0;
         }
 
         .info > div {
@@ -329,9 +326,29 @@
             box-sizing: border-box;
         }
 
+        .infoview {
+            opacity: 1;
+            transition: 2s;
+        }
+
     /* /info 영역 */
 
     /* infoleft 영역 */
+
+        .infoleft {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .moveLeft {
+            left: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 3s;
+        }
 
         .infoleft img {
             width: var(--size8);
@@ -366,7 +383,13 @@
     /* infomiddle 영역 */
 
     .infomiddle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         overflow: hidden;
+        z-index: 15;
+        background-color: var(--white);
     }
 
     .infomiddle h3 {
@@ -398,7 +421,7 @@
    }
 
     .infomiddle .infoImg {
-        width: 100%;
+        width: 90%;
         height: 450px;
         background: url(./../img/container/semi.jpg);
         background-repeat: no-repeat;
@@ -412,8 +435,18 @@
     /* inforight 영역 */
 
     .inforight {
-        /* background-color: var(--two_red); */
+        position: absolute;
+        right: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         overflow: hidden;
+    }
+
+    .moverRight {
+        right: -12%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 3s;
     }
 
     .inforight h3 {
@@ -511,7 +544,8 @@
     #coding .Codinginner {
         width: 90%;
         height: 80%;
-        background-color: var(--two_red);
+        /* background-color: var(--two_red); */
+        border: 2px solid var(--two_red);
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -537,7 +571,6 @@
     .codingimgBox li {
         width: 100%;
         height: 100%;
-        /* background-color: #eeeeee;/ */
         position: absolute;
         top: 5%;
     }
@@ -576,12 +609,12 @@
     }
 
     .resultLink a {
-        width: 4em;
-        padding: var(--size4);
+        width: 6em;
+        padding: var(--size3);
         box-sizing: border-box;
         display: block;
-        background-color: #ff0000;
-        font-size: var(--size5);
+        background-color: var(--three_red);
+        font-size: var(--size4);
         border-radius: 15px;
         text-align: center;
         color: var(--white);
@@ -691,10 +724,16 @@
         width: 100%;
         height: 100%;
         border-radius: 20px;
-        /* transform: scale(0.7); */
+        transform: scale(0.7);
         transition: all 0.3s;
-        /* opacity: 0.5; */
+        opacity: 0;
         position: relative;
+    }
+
+    .slide_list li.swiperWrapper {
+        transform: rotateY(360deg) scale(1);
+        opacity: 1;
+        transition: 2s;
     }
 
     .slide_list .img2 {
@@ -739,7 +778,7 @@
     /* footer */
     footer {
         width: 100%;
-        height: 30vh;
+        height: 100vh;
         background-color: var(--one_red);
         display: flex;
         align-items: center;

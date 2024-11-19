@@ -6,6 +6,7 @@ $(function(){
     let aboutme = $("#aboutme").offset().top + baseline;
     let coding = $("#coding").offset().top + baseline;
     let aiDesign = $("#aiDesign").offset().top + baseline;
+    let ft = $("#footer").offset().top + baseline;
 
 
     
@@ -35,16 +36,22 @@ $(function(){
         $("html, body").stop().animate({scrollTop: target}, 1200);
     });
 
-    // section
+    // aboutme
+    $(window).on("scroll", function(){
+        let abou = $(this).scrollTop();
+        // console.log(abou); // 스크롤 위치 확인
 
-    //coding
-
-    $("#coding .codingtextBox ol li").on("click", function(){
-        i = $(this).index();
-
-        $("#coding .codingtextBox li").removeClass("codingOrderedList");
-        $("#coding .codingtextBox li").eq(i).addClass("codingOrderedList");
+        if(abou >= aboutme && abou < coding) {
+            $(".info").addClass("infoview");
+            $(".infoleft").addClass("moveLeft");
+            $(".inforight").addClass("moverRight");
+        } else {
+            $(".info").removeClass("infoview");
+            $(".infoleft").removeClass("moveLeft");
+            $(".inforight").removeClass("moverRight");
+        };
     });
+    //coding
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -72,9 +79,28 @@ $(function(){
         tl.to(upBox, {
             y: "0"
         });
+
+        
+    $("#coding .codingtextBox ol li").on("click", function(){
+        let i = $(this).index();
+        console.log(i);
+
+        $("#coding .codingtextBox li").removeClass("codingOrderedList");
+        $("#coding .codingtextBox li").eq(i).addClass("codingOrderedList");
+
+    });
+
     // aiDesign
 
-    
+    $(window).on("scroll", function(){
+        let dsg = $(this).scrollTop();
+        // console.log(abou); // 스크롤 위치 확인
+        if(dsg >= aiDesign && dsg < ft) {
+            $(".slide_list li").addClass("swiperWrapper");
+        } else {
+            $(".slide_list li").removeClass("swiperWrapper");
+        };
+    });
 
     // /aiDesign
     
