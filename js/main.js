@@ -61,18 +61,19 @@ $(function(){
 
     te.to(txt, { 
         opacity: "1",
-        duration: "2",
+        duration: "4",
     });
 
     te.to(viewBox, {
-        scale: "0.7",
-        duration: "2",
-        opacity: "0.5",
-    })
+        scale: "4",
+        duration: "20",
+    });
 
     te.to(scroll, {
         opacity: "0",
-    })
+        duration: "2",
+    });
+
     // /welcome
 
 
@@ -81,7 +82,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= aboutme && abou < aiDesign) {
+        if(abou >= aboutme && abou < ft) {
             $(".info").addClass("infoview");
             $(".infoleft").addClass("moveLeft");
             $(".inforight").addClass("moverRight");
