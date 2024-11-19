@@ -28,6 +28,10 @@ p, dd, ul {
     font-family: 'omyu_pretty';
 }
 
+html {
+    width: 100%;
+}
+
 /* 보이지 않아도 되는 글자들 <span 또는 h2>숨기기 */
 html .h_hide {
     display: none;
