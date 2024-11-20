@@ -863,8 +863,8 @@
 }
 
 @media all and (min-width:768px) and (max-width:1023px) {
-     /* header */
-     header {
+    /* header */
+    header {
         background-color: transparent;
         width: 100%;
         padding: var(--size3);
@@ -878,12 +878,12 @@
     }
 
     h1 img {
-        width: 2.5em;
-        margin-top: 8px;
+        width: 3em;
+        margin-top: 6px;
     }
     
     header:hover {
-        background-color: var(--two_red);
+        background-color: var(--one_red);
     }
 
     /* header scroll event */
@@ -908,8 +908,29 @@
     }
 
     .mainMenu {
-        display: none;
-    } 
+        display: flex;
+    }
+
+    .mainMenu li {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .mainMenu a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-weight: bold;
+        color: var(--red);
+        font-size: var(--size4);
+        padding: 0px var(--size7);
+        box-sizing: border-box;
+    }
+
+    .mainMenu a:hover {
+        color: var(--three_red);
+    }
 
     /* subMenu 서브메뉴 스타일*/
 
@@ -924,6 +945,8 @@
     }
 
     .subMenu {
+        display: flex;
+        justify-content: space-between;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -931,11 +954,9 @@
     }
 
     nav .subMenu a {
-        display: block;
         color: var(--three_red);
         font-size: var(--size7);
         padding: 0px var(--size8);
-        margin-bottom: var(--size5);
     }
 
     nav .subMenu a:hover {
@@ -1027,6 +1048,9 @@
     #welcome img {
         width: 100%;
         height: 100%;
+        /* filter: brightness(50%); */
+        /* filter: blur(10px); */
+        /* filter: grayscale(100%); */
     }
 
     #welcome .welcomeText {
@@ -1034,14 +1058,13 @@
     }
 
     #welcome h2 {
-        font-size: var(--size3);
+        font-size: var(--size7);
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 10%;
+        top: 25%;
         line-height: var(--size7);
         z-index: 1;
-        font-size: var(--size7);
+        font-size: var(--size8);
     }
     
     #welcome h2 > span {
@@ -1050,11 +1073,10 @@
 
      /* 움직이는 하트 */
     .ain {
-        width: 100%;
+        width: 40%;
+        height: 40%;
         position: absolute;
-        left: 50%;
-        top: 45%;
-        transform: translate(-50%, -45%);
+        top: 10%;
     }
 
     .st0 {
@@ -1140,6 +1162,7 @@
     /* aboutme */
     #aboutme {
         width: 80%;
+        height: 100vh;
         margin: 0px auto;
         overflow: hidden;
         padding: var(--size6);
@@ -1150,14 +1173,43 @@
     /* info 영역 */
         .info {
             width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .info > div {
+            width: calc(100% / 3 - 100px);
+            border-radius: 20px;
+            padding: var(--size6);
+            box-sizing: border-box;
+        }
+
+        .infoview {
+            opacity: 1;
+            transition: 2s;
         }
 
     /* /info 영역 */
 
     /* infoleft 영역 */
+
         .infoleft {
-            width: 90%;
-            margin: 0px auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .moveLeft {
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 3s;
         }
 
         .infoleft dl {
@@ -1165,56 +1217,76 @@
         }
 
         .infoleft dt {
-            margin-bottom: var(--size3);
-            font-size: var(--size5);
-        }
-
-        .infoleft dd {
-            font-size: var(--size3);
+            margin-bottom: var(--size2);
+            font-size: var(--size4);
         }
 
         .infoleft .career li {
-            margin-bottom: var(--size3);
+            margin-bottom: var(--size4);
         }
 
         .skill {
             width: calc(100% / 2);
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
             flex-wrap: wrap;
-            gap: 2rem;
         }
     
         .skill img {
-            width: var(--size8);
-            object-fit: cover;
-            margin-left: var(--size2);
+            width: 2.5rem;
         }
     /* /infoleft 영역 */
 
     /* infomiddle 영역 */
+
     .infomiddle {
-        width: 90%;
-        margin: 0px auto;
-        /* background-color: #eeeeee; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        z-index: 15;
+        background-color: var(--back_color);
+    }
+
+    .movemiddle {
+        left: 47%;
+        transition: 3s;
     }
 
     .infomiddle h3 {
-        font-size: var(--size7);
+        font-size: var(--size8);
         text-transform: uppercase;
-        color: var(--four_red);
+        -webkit-text-stroke: 3px var(--red); 
+        color: transparent;
+    }
+
+    .infomiddle h3 span {
+        margin-left: var(--size8);
     }
 
     .infomiddle p {
         width: 100%;
         margin: var(--size4) 0px;
         color: var(--dark_gray);
-        font-size: var(--size3);
+        font-size: var(--size4);
+
+        animation: scr 5s linear infinite;
     }
+
+    @keyframes scr {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+   }
 
     .infomiddle .infoImg {
         width: 100%;
-        height: 250px;
+        height: 450px;
         background: url(./../img/container/semi.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -1225,8 +1297,93 @@
     /* /infomiddle 영역 */
 
     /* inforight 영역 */
+
     .inforight {
-        display: none;
+        position: absolute;
+        right: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+    }
+
+    .moverRight {
+        right: 0%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 3s;
+    }
+
+    .inforight h3 {
+        font-size: var(--size7);
+        color: var(--dark_gray);
+    }
+
+    .inforight .logoText, .inforight .homeSkill {
+        margin: var(--size3) 0px;
+    }
+
+    .inforight .logoText p {
+        line-height: 35px;
+    }
+
+    .inforight .logoText p span {
+        display: inline-block;
+        color: var(--red);
+        font-size: var(--size6);
+        text-transform: uppercase;
+    }
+
+    .homeSkill dt {
+        font-size: var(--size5);
+        color: var(--dark_gray);
+        margin: var(--size2);
+    }
+
+    .homeSkill ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .homeSkill ul li {
+        font-size: var(--size4);
+        padding: var(--size2);
+        border-radius: 50px;
+        box-sizing: border-box;
+    }
+
+    .colorPalate li {
+        border-radius: 50px;
+        text-align: center;
+        color: var(--white);
+        font-weight: bolder;
+    }
+
+    .colorPalate li:nth-child(1){
+        background-color: var(--one_red);
+    }
+    
+    .colorPalate li:nth-child(2){
+        background-color: var(--two_red);
+    }
+
+    .colorPalate li:nth-child(3){
+        background-color: var(--three_red);
+    }
+
+    .colorPalate li:nth-child(4){
+        background-color: var(--four_red);
+    }
+
+    .colorPalate li:nth-child(5){
+        background-color: var(--red);
+    }
+
+    .aboutFont li:nth-child(1) {
+        font-family: 'Katuri';
+    }
+
+    .aboutFont li:nth-child(2) {
+        font-family: 'omyu_pretty';
     }
         
     /* /inforight 영역 */
@@ -1235,14 +1392,13 @@
 
     /* coding */
     #coding {
-        width: 90%;
+        width: 80%;
         height: 100vh;
-        overflow: hidden;
         margin: 0px auto;
-        padding: var(--size4);
+        overflow: hidden;
+        padding: var(--size6);
         box-sizing: border-box;
         position: relative;
-        /* background-color: var(--two_red); */
     }
 
     #coding li {
@@ -1250,13 +1406,17 @@
     }
     
     #coding .Codinginner {
-        width: 100%;
-        height: 90%;
+        width: 90%;
+        height: 80%;
+        /* background-color: var(--two_red); */
         border: 2px solid var(--two_red);
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         padding: var(--size4);
         box-sizing: border-box;
         overflow: hidden;
-        border-radius: 40px;
+        border-radius: 50px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -1264,16 +1424,12 @@
     }
     
     #coding .codingimgBox {
-        width: 100%;
-        height: 100%;
+        width: 50%;
         object-fit: cover;
-        padding: var(--size2);
+        padding: var(--size6);
         box-sizing: border-box;
         border-radius: 20px;
-        position: absolute;
-        left: 48%;
-        top: 75%;
-        transform: translate(-50%, -50%);
+        position: relative;
     }
 
     .codingimgBox li {
@@ -1328,17 +1484,36 @@
     }
 
     #coding .codingtextBox {
-        display: none;
+        width: 50%;
+        padding: var(--size6);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    #coding .codingtextBox .codingList.check {
+        color: var(--red);
+        opacity: 1;
     }
 
     #coding h3 {
-        font-size: var(--size8);
+        font-size: var(--size10);
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
         color: transparent;
         position: absolute;
         right: 15%;
-        top: 10%;
+        top: 15%;
+    }
+    
+    #coding .codingtextBox ol {
+        font-size: var(--size6);
+        position: absolute;
+        top: 50%;
+    }
+    
+    #coding .codingtextBox li {
+        line-height: 2;
+        font-size: var(--size6);
     }
 
     /* /coding */
@@ -1350,25 +1525,26 @@
         height: 100vh;
         margin: 0px auto;
         overflow: hidden;
-        /* background-color: #f9cccc; */
+        padding: var(--size6);
+        box-sizing: border-box;
     }
     
     #aiDesign .textBox {
-        width: 100%;
         text-transform: uppercase;
-        padding: var(--size9);
+        padding: var(--size10);
         box-sizing: border-box;
     }
     
     #aiDesign .textBox h3 {
-        font-size: var(--size8);
+        font-size: var(--size10);
         text-transform: uppercase;
-        color: var(--four_red)
+        -webkit-text-stroke: 3px var(--red); 
+        color: transparent;
     }
     
     #aiDesign .textBox p {
         font-size: var(--size6);
-        color: var(--four_red);
+        -webkit-text-stroke: 3px var(--red); 
     }
     
     #aiDesign .moveCard {
@@ -1381,10 +1557,6 @@
         padding: 0px 30px;
         box-sizing: border-box;
         flex-shrink: 0;
-    }
-
-    .comingSoon {
-        display: none;
     }
     
     #aiDesign .moveCard .aibox {
@@ -1403,7 +1575,6 @@
     #aiDesign .aibox::after {
         width: 100%;
         height: 100%;
-        overflow: hidden;
         content: "";
         background-image: url(./../img/container/good.jpg);
         background-repeat: no-repeat;
@@ -1419,7 +1590,6 @@
     
     #aiDesign .aibox:hover::after {
         opacity: 0.5;
-        overflow: hidden;
     }
     
     #aiDesign .aibox:hover img {
@@ -1448,13 +1618,18 @@
         width: 100%;
         height: 30vh;
         background-color: var(--one_red);
+        display: flex;
+        align-items: center;
         position: relative;
         overflow: hidden;
     }
 
+    .ftContact {
+        margin: 0px auto;
+    }
+
     .ftCopy {
         width: 100%;
-        overflow: hidden;
         height: 20%;
         padding:var(--size4);
         box-sizing: border-box;
@@ -1462,7 +1637,7 @@
         color: var(--white);
         font-weight: bold;
         font-family: 'omyu_pretty';
-        font-size: var(--size4);
+        margin: 0px auto;
     }
 
     .topBtn {
@@ -1495,17 +1670,19 @@
     /* ftconLeft 영역 */
     .ftconLeft {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .ftconLeft dl {
         display: flex;
         justify-content: center;
-        padding: var(--size2);
+        padding: var(--size3);
         box-sizing: border-box;
     }
 
     .ftconLeft dt {
-        font-size: var(--size4);
+        font-size: var(--size5);
         display: flex;
         align-items: center;
         padding: 0px var(--size2);
@@ -1513,8 +1690,9 @@
     }
 
     .ftconLeft dd {
-        font-size: var(--size4);
-        margin: px;
+        font-size: var(--size5);
+        margin: 5px;
+        
         color: var(--gray);
     }
     /* /footer */
@@ -1992,8 +2170,7 @@
     #coding h3 {
         font-size: var(--size8);
         text-transform: uppercase;
-        -webkit-text-stroke: 3px var(--red); 
-        color: transparent;
+        color: var(--four_red);
         position: absolute;
         right: 15%;
         top: 10%;
@@ -2650,8 +2827,7 @@
     #coding h3 {
         font-size: var(--size8);
         text-transform: uppercase;
-        -webkit-text-stroke: 3px var(--red); 
-        color: transparent;
+        color: var(--four_red);
         position: absolute;
         right: 15%;
         top: 10%;
