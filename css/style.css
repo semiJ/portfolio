@@ -359,7 +359,7 @@
         }
 
         .moveLeft {
-            left: 8%;
+            left: 10%;
             top: 50%;
             transform: translateY(-50%);
             transition: 3s;
@@ -405,6 +405,11 @@
         overflow: hidden;
         z-index: 15;
         background-color: var(--back_color);
+    }
+
+    .movemiddle {
+        left: 47%;
+        transition: 3s;
     }
 
     .infomiddle h3 {
@@ -459,7 +464,7 @@
     }
 
     .moverRight {
-        right: -12%;
+        right: -5%;
         top: 50%;
         transform: translate(-50%, -50%);
         transition: 3s;
@@ -653,11 +658,11 @@
         -webkit-text-stroke: 3px var(--red); 
         color: transparent;
         position: absolute;
+        right: 15%;
         top: 15%;
     }
 
     #coding .codingtextBox h3 span {
-        display: block;
         margin-left: var(--size7);
     }
     

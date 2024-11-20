@@ -95,10 +95,12 @@ $(function(){
             $(".info").addClass("infoview");
             $(".infoleft").addClass("moveLeft");
             $(".inforight").addClass("moverRight");
+            $(".infomiddle").addClass("movemiddle");
         } else {
             $(".info").removeClass("infoview");
             $(".infoleft").removeClass("moveLeft");
             $(".inforight").removeClass("moverRight");
+            $(".infomiddle").removeClass("movemiddle");
         };
     });
 
