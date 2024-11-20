@@ -107,6 +107,7 @@ $(function(){
     //coding
 
         const upBox = document.querySelectorAll(".upBox");
+        const codingList = document.querySelectorAll(".codingList");
 
         const tl = gsap.timeline({
             scrollTrigger : {
@@ -116,6 +117,13 @@ $(function(){
                 start: "top top",
                 end: "+=600%",
                 markers: false,
+                onUpdate: (self) => {
+                    let index = Math.floor(self.progress * upBox.length - 1);
+                    codingList.forEach((t) => t.classList.remove("check"));
+                    if (codingList[index]){
+                        codingList[index].classList.add("check");
+                    }
+                }
             }
         });
 
@@ -131,106 +139,57 @@ $(function(){
             y: "0"
         });
 
-        gsap.to("#coding .codingList01", {
-            scrollTrigger: {
-              trigger: "#coding .codingBox2",
-              start: "-100% top",
-              toggleClass:{targets:'#coding .codingList01',className:'codingOrderedList'},
-              scrub: 2,
-              markers: false,
-            }
-        });
-          
-        gsap.to("#coding .codingList02", {
-            scrollTrigger: {
-              trigger: "#coding .codingBox3",
-              start: "-200% top",
-              toggleClass:{targets:'#coding .codingList02',className:'codingOrderedList'},
-              scrub: 2,
-              markers: false,
-            }
-        });
-          
-        gsap.to("#coding .codingList03", {
-            scrollTrigger: {
-              trigger: "#coding .codingBox4",
-              start: "-300% top",
-              toggleClass:{targets:'#coding .codingList03',className:'codingOrderedList'},
-              scrub: 2,
-              markers: false,
-            }
-        });
-
-        gsap.to("#coding .codingList04", {
-            scrollTrigger: {
-              trigger: "#coding .codingBox5",
-              start: "-400% top",
-              toggleClass:{targets:'#coding .codingList04',className:'codingOrderedList'},
-              scrub: 2,
-              markers: false,
-            }
-        });
-        
-    $("#coding .codingtextBox ol li").on("click", function(){
-        let i = $(this).index();
-        console.log(i);
-
-        $("#coding .codingtextBox li").removeClass("codingOrderedList");
-        $("#coding .codingtextBox li").eq(i).addClass("codingOrderedList");
-
-    });
-
     // aiDesign
 
-    // let moveCard = gsap.utils.toArray(".aiDesign .moveCard li");
-    // let moveCardmove01 = gsap.utils.toArray(".aiDesign .moveCard li.move01");
-    // let moveCardmove02 = gsap.utils.toArray(".aiDesign .moveCard li.move02");
-    // let moveCardmove03 = gsap.utils.toArray(".aiDesign .moveCard li.move03");
+    let moveCard = gsap.utils.toArray("#aiDesign .moveCard li");
+    let moveCardmove01 = gsap.utils.toArray("#aiDesign .moveCard li.move01");
+    let moveCardmove02 = gsap.utils.toArray("#aiDesign .moveCard li.move02");
+    let moveCardmove03 = gsap.utils.toArray("#aiDesign .moveCard li.move03");
     
-    // gsap.to(list,{
-    //     xPercent: -100 * (list.length - 6) ,
-    //     scrollTrigger:{
-    //         trigger: ".aiDesign",
-    //         pin: true,
-    //         scrub:2,
-    //         start : "center center",
-    //         end :"200%",
-    //         markers :false,
-    //     },
-    // });
+    gsap.to(moveCard,{
+        xPercent: -100 * (moveCard.length - 6) ,
+        scrollTrigger:{
+            trigger: "#aiDesign",
+            pin: true,
+            scrub:3,
+            start : "center center",
+            end :"200%",
+            markers :false,
+        },
+    });
 
-    // gsap.to(lista,{
-    //     y:50, 
-    //     rotation:50,
-    //     scrollTrigger:{
-    //         trigger:".aiDesign",
-    //         scrub:2,
-    //         end :"200%",
-    //         markers :true,
-    //     },
-    // });
+    gsap.to(moveCardmove01,{
+        y:50, 
+        rotation:50,
+        scrollTrigger:{
+            trigger:"#aiDesign",
+            scrub:2,
+            end :"200%",
+            markers :false,
+        },
+    });
 
-    // gsap.to(listb,{
-    //     y:50, 
-    //     rotation:-50,
-    //     scrollTrigger:{
-    //         trigger:".aiDesign",
-    //         scrub:2,
-    //         end :"200%",
-    //         markers :true,
-    //     },
-    // });
+    gsap.to(moveCardmove02,{
+        y:50, 
+        rotation:-20,
+        scrollTrigger:{
+            trigger:"#aiDesign",
+            scrub:2,
+            end :"150%",
+            markers :false,
+        },
+    });
 
-    // gsap.to(listc,{
-    //     y:50, 
-    //     rotation:100,
-    //     scrollTrigger:{
-    //         trigger:".aiDesign",
-    //         scrub:2,
-    //         end :"200%",
-    //         markers :true,
-    //     },
-    // });
+    gsap.to(moveCardmove03,{
+        y:50, 
+        rotation:70,
+        scrollTrigger:{
+            trigger:"#aiDesign",
+            scrub:2,
+            end :"150%",
+            markers :false,
+        },
+    });
 
     // /aiDesign
     
