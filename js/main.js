@@ -182,36 +182,36 @@ $(function(){
 
     // aiDesign
 
-    const scr = gsap.timeline({
-        scrollTrigger : {
-            trigger: "#aiDesign",
-            pin: true,
-            scrub: 3,
-            start: "top top",
-            end: "+=600%",
-            markers: false,
-        }
-    });
+    // const scr = gsap.timeline({
+    //     scrollTrigger : {
+    //         trigger: "#aiDesign",
+    //         pin: true,
+    //         scrub: 3,
+    //         start: "top top",
+    //         end: "+=600%",
+    //         markers: false,
+    //     }
+    // });
 
-    const upImg = document.querySelectorAll(".slide_list .upImg");
+    // const upImg = document.querySelectorAll(".slide_list .upImg");
 
-    upImg.forEach(function (upImg, index) {
+    // upImg.forEach(function (upImg, index) {
     
-        scr.from(upImg, {
-            y: "50%",
-            duration:"3",
-            ease: "none",
-            stagger: 0.5,
-            opacity: 0,
-         });
+    //     scr.from(upImg, {
+    //         y: "50%",
+    //         duration:"3",
+    //         ease: "none",
+    //         stagger: 0.5,
+    //         opacity: 0,
+    //      });
 
-         scr.to(upImg, 1, {
-            y: "0",
-            delay: (index + 1) * 0.7,
-            opacity: 1,
-            });
+    //      scr.to(upImg, 1, {
+    //         y: "0",
+    //         delay: (index + 1) * 0.7,
+    //         opacity: 1,
+    //         });
 
-        });
+    //     });
 
     // /aiDesign
     
