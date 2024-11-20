@@ -182,36 +182,55 @@ $(function(){
 
     // aiDesign
 
-    // const scr = gsap.timeline({
-    //     scrollTrigger : {
-    //         trigger: "#aiDesign",
+    // let moveCard = gsap.utils.toArray(".aiDesign .moveCard li");
+    // let moveCardmove01 = gsap.utils.toArray(".aiDesign .moveCard li.move01");
+    // let moveCardmove02 = gsap.utils.toArray(".aiDesign .moveCard li.move02");
+    // let moveCardmove03 = gsap.utils.toArray(".aiDesign .moveCard li.move03");
+    
+    // gsap.to(list,{
+    //     xPercent: -100 * (list.length - 6) ,
+    //     scrollTrigger:{
+    //         trigger: ".aiDesign",
     //         pin: true,
-    //         scrub: 3,
-    //         start: "top top",
-    //         end: "+=600%",
-    //         markers: false,
-    //     }
+    //         scrub:2,
+    //         start : "center center",
+    //         end :"200%",
+    //         markers :false,
+    //     },
     // });
 
-    // const upImg = document.querySelectorAll(".slide_list .upImg");
+    // gsap.to(lista,{
+    //     y:50, 
+    //     rotation:50,
+    //     scrollTrigger:{
+    //         trigger:".aiDesign",
+    //         scrub:2,
+    //         end :"200%",
+    //         markers :true,
+    //     },
+    // });
 
-    // upImg.forEach(function (upImg, index) {
-    
-    //     scr.from(upImg, {
-    //         y: "50%",
-    //         duration:"3",
-    //         ease: "none",
-    //         stagger: 0.5,
-    //         opacity: 0,
-    //      });
+    // gsap.to(listb,{
+    //     y:50, 
+    //     rotation:-50,
+    //     scrollTrigger:{
+    //         trigger:".aiDesign",
+    //         scrub:2,
+    //         end :"200%",
+    //         markers :true,
+    //     },
+    // });
 
-    //      scr.to(upImg, 1, {
-    //         y: "0",
-    //         delay: (index + 1) * 0.7,
-    //         opacity: 1,
-    //         });
-
-    //     });
+    // gsap.to(listc,{
+    //     y:50, 
+    //     rotation:100,
+    //     scrollTrigger:{
+    //         trigger:".aiDesign",
+    //         scrub:2,
+    //         end :"200%",
+    //         markers :true,
+    //     },
+    // });
 
     // /aiDesign
     
