@@ -151,7 +151,7 @@ $(function(){
         scrollTrigger:{
             trigger: "#aiDesign",
             pin: true,
-            scrub:3,
+            scrub: 4,
             start : "center center",
             end :"200%",
             markers :false,
