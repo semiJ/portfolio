@@ -154,7 +154,7 @@ $(function(){
             scrub: 4,
             start : "center center",
             end :"200%",
-            markers :true,
+            markers :false,
         },
     });
 
