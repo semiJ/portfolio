@@ -659,7 +659,6 @@
 
     #coding .codingtextBox .codingList.check {
         color: var(--red);
-        opacity: 1;
     }
 
     #coding h3 {
