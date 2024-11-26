@@ -6,6 +6,7 @@
     /* 주컬러 */
     --white : #FFFFFF;
     --red : #ff0000;
+    --dark_red : #A3171B;
     --one_red : #f9cccc;
     --two_red : #feb2b2;
     --three_red : #f99494;
@@ -198,10 +199,17 @@
     #welcome {
         width: 100%;
         height: 100vh;
-        background: url(./../img/container/main_welcome.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        min-height: 700px;
+    }
+
+    #welcome .welcomebox {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        background: linear-gradient(rgb(196, 24, 33), rgb(214, 91, 75), rgb(228, 139, 119), rgb(236, 185, 166), rgb(238, 230, 216));
+        display: flex;
+        /* background-attachment: fixed;  */
+        overflow: hidden;
     }
 
     #welcome img {
@@ -214,6 +222,7 @@
 
     #welcome .welcomeText {
         opacity: 0;
+        transition: 2s;
     }
 
     #welcome h2 {
@@ -226,55 +235,21 @@
         font-size: 3em;
     }
     
-    #welcome h2 > span {
-        color: var(--three_red);
+    #welcome .publisher {
+        color: var(--four_red);
+        letter-spacing: 10px;
     }
-
-     /* 움직이는 하트 */
-    .ain {
-        width: 40%;
-        height: 40%;
-        position: absolute;
-        top: 10%;
-    }
-
-    .st0 {
-        fill: none;
-        stroke:var (--red);
-        stroke-width: 20;
-        stroke-linecap: round;
-        stroke-miterlimit: 20;
-
-         /* 점선 */
-         stroke-dasharray: 1563;
-         /* 애니메이션 시작위치 */
-         stroke-dashoffset: 1563;
-         /* forwar 마지막꺼 다보이게하는거 */
- 
-         animation: ani01 2s linear infinite;
-    }
-
-    @keyframes ani01 {
-        0% {
-            stroke-dashoffset: 1563;
-        }
-
-        100% {
-            stroke-dashoffset: 0;
-        }
-    }
-
-    /* /움직이는 하트 */
 
      /*scroll*/
     .scroll {
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 90%;
         transform: translate(-50%, -50%);
         display: flex;
         gap: 10px;
         color: var(--red);
+        transition: 2s;
     }
     .scroll p {
         color: #fff;
@@ -293,9 +268,10 @@
         height: 6px;
         border-radius: 50%;
         background-color: var(--one_red);
-        animation: move 2s infinite;
+        animation: scrmove 2s infinite;
     }
-    @keyframes move {
+
+    @keyframes scrmove {
 
     0% {
       opacity: 0;
@@ -328,223 +304,152 @@
         position: relative;
     }
 
-    /* info 영역 */
-        .info {
-            width: 100%;
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            overflow: hidden;
-            opacity: 0;
-        }
+    #aboutme img {
+        width: 2rem;
+    }
 
-        .info > div {
-            width: calc(100% / 3 - 100px);
-            border-radius: 20px;
-            padding: 1.8rem;
-            box-sizing: border-box;
-        }
-
-        .infoview {
-            opacity: 1;
-            transition: 2s;
-        }
-
-    /* /info 영역 */
-
-    /* infoleft 영역 */
-
-        .infoleft {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-        }
-
-        .moveLeft {
-            left: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: 3s;
-        }
-
-        .infoleft dl {
-            margin-bottom: 1.5rem;
-        }
-
-        .infoleft dt {
-            margin-bottom: 0.6rem;
-            font-size: 1.2rem;
-        }
-
-        .infoleft .career li {
-            margin-bottom: 1.2rem;
-        }
-
-        .skill {
-            width: calc(100% / 2);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-    
-        .skill img {
-            width: 2.5rem;
-        }
-    /* /infoleft 영역 */
-
-    /* infomiddle 영역 */
-
-    .infomiddle {
+    #aboutme .info {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: space-between;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         overflow: hidden;
-        z-index: 15;
-        background-color: var(--back_color);
+        opacity: 0;
     }
 
-    .movemiddle {
-        left: 47%;
-        transition: 3s;
+    #aboutme .infoview {
+        opacity: 1;
+        transition: 2s;
     }
 
-    .infomiddle h3 {
-        font-size: 3em;
-        text-transform: uppercase;
-        -webkit-text-stroke: 3px var(--red); 
-        color: transparent;
+    .info .infoLeft {
+        width: 30%;
+        height: 90%;
+        border: 1px solid var(--four_red);
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4rem;
+        box-sizing: border-box;
+        border-radius: 50px;
+        box-shadow: rgb(255, 196, 196) 0px 5px 15px;
     }
 
-    .infomiddle h3 span {
-        margin-left: 3em;
+    .info .infoLeft dl {
+        margin-bottom: 0.5rem;
     }
 
-    .infomiddle p {
+    .info .infoLeft dt{
+        margin-bottom: 0.5rem;
+    }
+
+    .info .skill {
+        display: grid;/* Grid layout 사용 */
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .info .career li .period {
+        font-weight: bold;
+    }
+    
+    .info .career li .team {
+        margin: 1rem 2rem;
+    }
+
+    .info .infoMiddle {
+        width: 30%;
+        height: 90%;
+        border: 1px solid var(--four_red);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 4rem;
+        box-sizing: border-box;
+        border-radius: 50px;
+        box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+    }
+
+    .info .infoMiddle h3 {
+        font-size: 2rem;
+        margin-bottom: 0.8rem ;
+    }
+
+    .info .infoMiddle p {
+        font-size: 1.1rem;
+    }
+
+    .info .infoImg {
         width: 100%;
-        margin: 1.2rem 0px;
-        color: var(--dark_gray);
-        font-size: 1.2rem;
-
-        animation: scr 5s linear infinite;
-    }
-
-    @keyframes scr {
-        from {
-            transform: translateX(0%);
-        }
-        to {
-            transform: translateX(100%);
-        }
-   }
-
-    .infomiddle .infoImg {
-        width: 100%;
-        height: 450px;
+        height: 60%;
+        border-radius: 50px;
         background: url(./../img/container/semi.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        border-radius: 20px;
+        margin: 2rem 0px;
     }
-        
-    /* /infomiddle 영역 */
 
-    /* inforight 영역 */
-
-    .inforight {
+    .info .infoRight {
+        width: 30%;
+        height: 90%;
+        border: 1px solid var(--four_red);
         position: absolute;
-        right: 20%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-    }
-
-    .moverRight {
         right: 0%;
         top: 50%;
-        transform: translate(-50%, -50%);
-        transition: 3s;
-    }
-
-    .inforight h3 {
-        font-size: 2em;
-        color: var(--dark_gray);
-    }
-
-    .inforight .logoText, .inforight .homeSkill {
-        margin: 0.8rem 0px;
-    }
-
-    .inforight .logoText p {
-        line-height: 35px;
-    }
-
-    .inforight .logoText p span {
-        display: inline-block;
-        color: var(--red);
-        font-size: 1.8rem;
-        text-transform: uppercase;
-    }
-
-    .homeSkill dt {
-        font-size: 1.5rem;
-        color: var(--dark_gray);
-        margin: 0.6rem;
-    }
-
-    .homeSkill ul {
-        display: flex;
-        gap: 10px;
-    }
-
-    .homeSkill ul li {
-        font-size: 1.2rem;
-        padding: 0.6rem;
-        border-radius: 50px;
+        transform: translateY(-50%);
+        padding: 4rem;
         box-sizing: border-box;
-    }
-
-    .colorPalate li {
         border-radius: 50px;
-        text-align: center;
-        color: var(--white);
-        font-weight: bolder;
+        box-shadow: rgb(255, 196, 196) 0px 5px 15px;
     }
 
-    .colorPalate li:nth-child(1){
+    .info .infoRight h3 {
+        margin: 1.5rem 0px;
+        font-size: 2rem;
+    }
+
+    .info .infoRight .homeSkill ul {
+        display: flex;
+    }
+
+    .info .infoRight .homeSkill ul li {
+        padding: 0.2rem;
+    }
+
+    .info .infoRight .colorPalate p {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin: 0.5rem auto;
+    }
+
+    .info .infoRight .colorPalate .cp01 {
         background-color: var(--one_red);
     }
-    
-    .colorPalate li:nth-child(2){
+
+    .info .infoRight .colorPalate .cp02 {
         background-color: var(--two_red);
     }
 
-    .colorPalate li:nth-child(3){
+    .info .infoRight .colorPalate .cp03 {
         background-color: var(--three_red);
     }
 
-    .colorPalate li:nth-child(4){
+    .info .infoRight .colorPalate .cp04 {
         background-color: var(--four_red);
     }
 
-    .colorPalate li:nth-child(5){
+    .info .infoRight .colorPalate .cp05 {
         background-color: var(--red);
     }
-
-    .aboutFont li:nth-child(1) {
-        font-family: 'Katuri';
-    }
-
-    .aboutFont li:nth-child(2) {
-        font-family: 'omyu_pretty';
-    }
-        
-    /* /inforight 영역 */
 
     /* /aboutme */
 
@@ -563,10 +468,11 @@
     }
     
     #coding .Codinginner {
-        width: 90%;
+        width: 100%;
         height: 80%;
         /* background-color: var(--two_red); */
-        border: 2px solid var(--two_red);
+        border: 2px solid var(--four_red);
+        box-shadow: rgb(255, 196, 196) 0px 5px 15px;
         display: flex;
         justify-content: center;
         gap: 20px;
@@ -700,11 +606,6 @@
         color: transparent;
     }
     
-    #aiDesign .textBox p {
-        font-size: 1.8rem;
-        -webkit-text-stroke: 3px var(--red); 
-    }
-    
     #aiDesign .moveCard {
         display: flex;
     }
@@ -734,7 +635,7 @@
         width: 100%;
         height: 100%;
         content: "";
-        background-image: url(./../img/container/good.jpg);
+        background-image: url(./../img/container/designBtnicon.svg);
         background-repeat: no-repeat;
         background-size: 100px;
         background-position: center;

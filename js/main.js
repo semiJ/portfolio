@@ -48,40 +48,35 @@ $(function(){
 
     //welcome
 
-    let viewBox = document.querySelector("#welcome img");
+    let viewBox = document.querySelector("#welcome .welcomebox");
     let txt = document.querySelector("#welcome .welcomeText");
     let scroll = document.querySelector("#welcome .scroll");
 
     let te = gsap.timeline({
         scrollTrigger: {
-
             trigger: "#welcome",
             pin: true,
-            // opacity: 0,
-
-            scrub: 3,
+            scrub: 5,
             start: "top top",
-
             end: "bottom top",
             markers: false,
         },
-
     });
-
-    te.to(txt, { 
-        opacity: "1",
-        duration: "4",
-    });
-
-    te.to(viewBox, {
-        scale: "4",
-        duration: "20",
-    });
-
+    
     te.to(scroll, {
         opacity: "0",
-        duration: "1",
+        duration: "5",
     });
+    
+    te.to(txt, { 
+        opacity: "1",
+        duration: "10",
+    });
+    
+    te.to(viewBox, {
+        scale: "3",
+        duration: "30",
+    });    
 
     // /welcome
 
@@ -92,15 +87,9 @@ $(function(){
         // console.log(abou); // 스크롤 위치 확인
 
         if(abou >= welcome && abou < aiDesign) {
-            $(".info").addClass("infoview");
-            $(".infoleft").addClass("moveLeft");
-            $(".inforight").addClass("moverRight");
-            $(".infomiddle").addClass("movemiddle");
+            $("#aboutme .info").addClass("infoview");
         } else {
-            $(".info").removeClass("infoview");
-            $(".infoleft").removeClass("moveLeft");
-            $(".inforight").removeClass("moverRight");
-            $(".infomiddle").removeClass("movemiddle");
+            $("#aboutme .info").removeClass("infoview");
         };
     });
 

@@ -52,33 +52,23 @@
     <main id="main">
         <!-- section 01 Welcome -->
         <section id="welcome">
-            <img src="img/container/main_welcome.png" alt="메인 이미지">
-            <div class="welcomeText">
-                <h2>
-                    안녕하세요<br>
-                    항상 도전하는<br>
-                    <span class="publisher">웹</span>
-                    <span>퍼</span>
-                    <span>블</span>
-                    <span>리</span>
-                    <span>셔</span><br>
-                    <span>전세미</span>입니다.
-                </h2>
-                <div class="ain">
-                    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 471.28 459.89" style="enable-background:new 0 0 471.28 459.89;" xml:space="preserve">
-                    <style type="text/css">
-                    .st0{fill:none;stroke:#ED1C24;stroke-width:15;stroke-miterlimit:10;}
-                    </style>
-                    <path class="st0" d="M230.64,131c0,0-163.14-199.5-203.64,0c-43.61,214.8,203.64,310,203.64,310s218.5-64.38,223.3-287.66
-                        c0.4-18.47-3.13-36.8-10.51-53.74C418.85,43.26,349.03-66.37,230.64,131z"/>
-                    </svg>
+            <div>
+                <div class="welcomebox">
+                    <span class="h_hide">welcome이미지</span>
                 </div>
-            </div>
-            <div class="scroll">
-                <p>SCROLL</p>
-                <div class="scrollBar">
-                  <div class="circle"><span class="h_hide">스크롤 안쪽 배경</span></div>
+                <div class="welcomeText">
+                    <h2>
+                        안녕하세요<br>
+                        도전하는<br>
+                        <span class="publisher">퍼블리셔</span><br>
+                        전세미입니다.
+                    </h2>
+                </div>
+                <div class="scroll">
+                    <p>SCROLL</p>
+                    <div class="scrollBar">
+                      <div class="circle"><span class="h_hide">스크롤 안쪽 배경</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -88,7 +78,7 @@
             <h2 class="h_hide">전세미 소개</h2>
             <div class="info">
                 <!-- aboutme 왼쪽 영역 -->
-                <div class="infoleft">
+                <div class="infoLeft">
                     <dl>
                         <dt>이름</dt>
                         <dd>전세미</dd>
@@ -106,17 +96,17 @@
                         <dd>
                             <ul class="career">
                                 <li>
-                                    2017.01 ~ 2018.01
-                                    <p>(주) 모닝인 [띵동] cs 운영팀</p> 
+                                    <p class="period">2017.01 ~ 2018.01</p>
+                                    <p class="team">(주) 모닝인 [띵동] cs 운영팀</p> 
                                 </li>
                                 <li>
-                                    2018.01 ~ 2020.12
-                                    <p>(주) 허니비즈 [띵동] cs 운영팀</p>
-                                    <p>(주) 허니비즈 [띵동] 사내 프로그램 (TMS) 기획 및 PM 개발팀 (2019.09 직무변경)</p>
+                                    <p class="period">2018.01 ~ 2020.12</p>
+                                    <p class="team">(주) 허니비즈 [띵동] cs 운영팀</p>
+                                    <p class="team">(주) 허니비즈 [띵동] 사내 프로그램 (TMS) 기획 및 PM 개발팀 (2019.09 직무변경)</p>
                                 </li>
                                 <li>
-                                    2021.08 ~ 2024.03
-                                    <p>(주) 더파이러츠 [인어교주해적단] UX/UI 기획 개발본부 기획팀</p>
+                                    <p class="period">2021.08 ~ 2024.03</p>
+                                    <p class="team">(주) 더파이러츠 [인어교주해적단] UX/UI 기획 개발본부 기획팀</p>
                                 </li>
                             </ul>
                         </dd>
@@ -139,7 +129,7 @@
                 </div>
                 <!-- /aboutme 왼쪽 영역 -->
                 <!-- aboutme 가운데 영역 -->
-                <div class="infomiddle">
+                <div class="infoMiddle">
                     <h3>
                         Responsibilty <br> <span>&  diligent</span>
                     </h3>
@@ -153,7 +143,7 @@
                 </div>
                 <!-- /aboutme 가운데 영역 -->
                 <!-- aboutme 오른쪽 영역 -->
-                <div class="inforight">
+                <div class="infoRight">
                     <h3>로고의 의미</h3>
                     <div class="logoText">
                         <p>
@@ -164,7 +154,8 @@
                             그 중에 idb를 이용하여 로고를 만들게 되었습니다.
                         </p>
                         <p>
-                            i 가 저라고 생각하여 제 주변 사람들이 힘들고 어려울 때 저에게 편하게 기댈 수 있었으면 좋겠어서<br>
+                            i 가 저라고 생각하여 제 주변 사람들이 힘들고 어려울 때<br>
+                            저에게 편하게 기댈 수 있었으면 좋겠어서<br>
                             양 옆에 db를 i에게 기대는 구조로 로고를 구성했으며,
                         </p>
                         <p>
@@ -200,11 +191,26 @@
                             <dt>컬러</dt>
                             <dd>
                                 <ul class="colorPalate">
-                                    <li>#f9cccc</li>
-                                    <li>#feb2b2</li>
-                                    <li>#f99494</li>
-                                    <li>#ff4545</li>
-                                    <li>#ff0000</li>
+                                    <li>
+                                        <p class="cp01"><span class="h_hide">색상영역</span></p>
+                                        #f9cccc
+                                    </li>
+                                    <li>
+                                        <p class="cp02"><span class="h_hide">색상영역</span></p>
+                                        #feb2b2
+                                    </li>
+                                    <li>
+                                        <p class="cp03"><span class="h_hide">색상영역</span></p>
+                                        #f99494
+                                    </li>
+                                    <li>
+                                        <p class="cp04"><span class="h_hide">색상영역</span></p>
+                                        #ff4545
+                                    </li>
+                                    <li>
+                                        <p class="cp05"><span class="h_hide">색상영역</span></p>
+                                        #ff0000
+                                    </li>
                                 </ul>
                             </dd>
                         </dl>
@@ -229,6 +235,15 @@
             <!-- 일러스트 버튼 영역 -->
             <h3>Clone Coding</h3>
             <div class="Codinginner">
+                <div class="codingtextBox">
+                    <ol>
+                        <li class="codingList">01 <span>풀무원</span></li>
+                        <li class="codingList">02 <span>스토리타코</span></li>
+                        <li class="codingList">03 <span>매드포갈릭</span></li>
+                        <li class="codingList">04 <span>아몬즈</span></li>
+                        <li class="codingList h_hide">05 <span>준비중</span></li>
+                    </ol>
+                </div>
                 <ul class="codingimgBox">
                     <!-- 보이는 이미지 -->
                     <li class="codingBox2 upBox">
@@ -275,16 +290,7 @@
                     <!-- 안보이는 이미지 -->
                     <li class="codingBox7 upBox"><span class="h_hide">빈코딩</span></li>
                     <!-- /안보이는 이미지 -->
-                </ul>
-                <div class="codingtextBox">
-                    <ol>
-                        <li class="codingList">01 <span>풀무원</span></li>
-                        <li class="codingList">02 <span>스토리타코</span></li>
-                        <li class="codingList">03 <span>아몬즈</span></li>
-                        <li class="codingList">04 <span>커버링</span></li>
-                        <li class="codingList h_hide">05 <span>준비중</span></li>
-                    </ol>
-                </div>
+                </ul>    
             </div>
         </section>
         <!-- /section 04 Coding -->
@@ -293,8 +299,7 @@
             <h2 class="h_hide">디자인 결과물</h2>
             <!-- 일러스트 버튼 영역 -->
             <div class="textBox">
-                <h3>Illustration</h3>
-                <p>This is an illustration.</p>
+                <h3>Design</h3>
             </div>
             <ul class="moveCard">
                 <li class="move01">
