@@ -606,12 +606,12 @@
         margin-bottom: 2rem;
     }
 
-    #coding .codingtextBox .codingList.check {
-        color: var(--red);
-    }
-
     #coding .codingtextBox .codingList .resultLink {
         opacity: 0;
+    }
+
+    #coding .codingtextBox .codingList .resultLink.resultView {
+        color: var(--red);
     }
 
     #coding .codingtextBox .codingList .resultLink.resultView {

@@ -66,35 +66,35 @@ $(function(){
     
     te.to(scroll, {
         opacity: "0",
-        duration: "10",
+        duration: "20",
     }); 
     
     te.to(txt, { 
         opacity: "1",
         left: "50%",
-        duration: "20",
+        duration: "50",
     });
 
     te.to(subtxt, { 
         opacity: "1",
         right: "50%",
-        duration: "20",
+        duration: "50",
     });
 
     te.to(viewBox, {
         scale: "0.3",
         translateY : "-200%",
-        duration: "50",
+        duration: "80",
     });
 
     te.to(txt, { 
         top: "-200%",
-        duration: "80",
+        duration: "50",
     });
 
     te.to(subtxt, { 
         bottom: "-200%",
-        duration: "80",
+        duration: "50",
     });
     
 
@@ -127,13 +127,6 @@ $(function(){
                 start: "top top",
                 end: "+=600%",
                 markers: false,
-                onUpdate: (self) => {
-                    let index = Math.floor(self.progress * upBox.length - 1);
-                    codingList.forEach((t) => t.classList.remove("check"));
-                    if (codingList[index]){
-                        codingList[index].classList.add("check");
-                    }
-                },
                 onUpdate: (self) => {
                     let index = Math.floor(self.progress * upBox.length - 1);
                     resultLink.forEach((t) => t.classList.remove("resultView"));
