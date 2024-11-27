@@ -3,7 +3,7 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -500;
+    let baseline = -400;
 
     let header = $("header").offset().top + baseline;
     let welcome = $("#welcome").offset().top + baseline;
@@ -110,7 +110,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= aboutme && abou < aiDesign) {
+        if(abou >= coding && abou < aiDesign) {
             $("#aboutme .info").addClass("infoview");
             $("#aboutme .infoLeft").addClass("aniLeft");
             $("#aboutme .infoRight").addClass("aniRight");
