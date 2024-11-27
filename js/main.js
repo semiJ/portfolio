@@ -74,7 +74,7 @@ $(function(){
     });
     
     te.to(viewBox, {
-        scale: "3",
+        scale: "1.8",
         duration: "30",
     });    
 

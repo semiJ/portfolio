@@ -206,9 +206,10 @@
         width: 100%;
         height: 100vh;
         min-height: 700px;
-        background: linear-gradient(rgb(196, 24, 33), rgb(214, 91, 75), rgb(228, 139, 119), rgb(236, 185, 166), rgb(238, 230, 216));
-        display: flex;
-        /* background-attachment: fixed;  */
+        background: url(./../img/container/welcome.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         overflow: hidden;
     }
 
@@ -223,6 +224,7 @@
     #welcome .welcomeText {
         opacity: 0;
         transition: 2s;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     }
 
     #welcome h2 {
