@@ -231,6 +231,11 @@
         transition: 3s;
         transform: translateX(-50%);
     }
+
+    #welcome .welcomeText.topslide {
+        top: -200%;
+        transition: 1.5s;
+    }
     
     #welcome .publisher {
         font-size: 10em;
@@ -244,13 +249,18 @@
         opacity: 0;
         position: absolute;
         right: -0%;
-        bottom: 30%;
+        bottom: 40%;
         transition: 3s;
         transform: translateX(50%);
     }
 
+    #welcome .welcomeMy.bottomslide {
+        bottom: -200%;
+        transition: 1.5s;
+    }
+
     #welcome .welcomeMyTxt {
-        font-size: 5em;
+        font-size: 3rem;
         text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
         color: var(--white);
     }

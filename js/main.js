@@ -3,13 +3,14 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -600;
+    let baseline = -500;
 
+    let header = $("header").offset().top + baseline;
     let welcome = $("#welcome").offset().top + baseline;
     let aboutme = $("#aboutme").offset().top + baseline;
     let coding = $("#coding").offset().top + baseline;
     let aiDesign = $("#aiDesign").offset().top + baseline;
-    let ft = $("#footer").offset().top + baseline;
+    let ft = $("footer").offset().top + baseline;
 
 
     
@@ -57,7 +58,7 @@ $(function(){
         scrollTrigger: {
             trigger: "#welcome",
             pin: true,
-            scrub: 5,
+            scrub: 3,
             start: "top top",
             end: "bottom top",
             markers: false,
@@ -66,7 +67,7 @@ $(function(){
     
     te.to(scroll, {
         opacity: "0",
-        duration: "20",
+        duration: "30",
     }); 
     
     te.to(txt, { 
@@ -87,14 +88,17 @@ $(function(){
         duration: "80",
     });
 
-    te.to(txt, { 
-        top: "-200%",
-        duration: "50",
-    });
+    $(window).on("scroll", function(){
+        let wel = $(this).scrollTop();
+        // console.log(abou); // 스크롤 위치 확인
 
-    te.to(subtxt, { 
-        bottom: "-200%",
-        duration: "50",
+        if(wel >= welcome && wel <= aboutme) {
+            $("#welcome .welcomeText").addClass("topslide");
+            $("#welcome .welcomeMy").addClass("bottomslide");
+        } else {
+            $("#welcome .welcomeText").removeClass("topslide");
+            $("#welcome .welcomeMy").removeClass("bottomslide");
+        };
     });
     
 
