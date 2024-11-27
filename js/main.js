@@ -66,25 +66,35 @@ $(function(){
     
     te.to(scroll, {
         opacity: "0",
-        duration: "5",
+        duration: "10",
+    }); 
+    
+    te.to(txt, { 
+        opacity: "1",
+        left: "50%",
+        duration: "20",
+    });
+
+    te.to(subtxt, { 
+        opacity: "1",
+        right: "50%",
+        duration: "20",
     });
 
     te.to(viewBox, {
         scale: "0.3",
         translateY : "-200%",
         duration: "50",
-    });    
-    
+    });
+
     te.to(txt, { 
-        opacity: "1",
-        left: "50%",
-        duration: "10",
+        top: "-200%",
+        duration: "80",
     });
 
     te.to(subtxt, { 
-        opacity: "1",
-        right: "50%",
-        duration: "10",
+        bottom: "-200%",
+        duration: "80",
     });
     
 
