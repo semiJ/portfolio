@@ -212,7 +212,6 @@
         background-position: center;
         background-size: cover;
         overflow: hidden;
-        transition: 2s;
     }
 
     #welcome img {
@@ -228,13 +227,11 @@
         position: absolute;
         left: -0%;
         top: 30%;
-        transition: 3s;
         transform: translateX(-50%);
     }
 
     #welcome .welcomeText.topslide {
         top: -200%;
-        transition: 1.5s;
     }
     
     #welcome .publisher {
@@ -248,15 +245,13 @@
     #welcome .welcomeMy {
         opacity: 0;
         position: absolute;
-        right: -0%;
+        right: -10%;
         bottom: 40%;
-        transition: 3s;
         transform: translateX(50%);
     }
 
     #welcome .welcomeMy.bottomslide {
         bottom: -200%;
-        transition: 1.5s;
     }
 
     #welcome .welcomeMyTxt {
@@ -351,6 +346,14 @@
         transition: 2s;
     }
 
+    #aboutme .infoLeft.aniLeft{
+        left: 18%;
+    }
+
+    #aboutme .infoRight.aniRight{
+        right: 18%;
+    }
+
     .info .infoLeft {
         width: 31%;
         height: 90%;
@@ -363,6 +366,11 @@
         box-sizing: border-box;
         border-radius: 50px;
         box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 1.5s;
     }
 
     .info .infoLeft dl {
@@ -441,6 +449,11 @@
         box-sizing: border-box;
         border-radius: 50px;
         box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        transition: 1.5s;
     }
 
     .info .infoRight h3 {

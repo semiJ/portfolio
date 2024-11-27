@@ -69,28 +69,28 @@ $(function(){
         opacity: "0",
         duration: "30",
     }); 
-    
-    te.to(txt, { 
-        opacity: "1",
-        left: "50%",
-        duration: "50",
-    });
-
-    te.to(subtxt, { 
-        opacity: "1",
-        right: "50%",
-        duration: "50",
-    });
 
     te.to(viewBox, {
         scale: "0.3",
         translateY : "-200%",
         duration: "80",
     });
+    
+    te.to(txt, { 
+        opacity: "1",
+        left: "50%",
+        duration: "20",
+    });
+
+    te.to(subtxt, { 
+        opacity: "1",
+        right: "50%",
+        duration: "20",
+    });
 
     $(window).on("scroll", function(){
         let wel = $(this).scrollTop();
-        // console.log(abou); // 스크롤 위치 확인
+        // console.log(wel); // 스크롤 위치 확인
 
         if(wel >= welcome && wel <= aboutme) {
             $("#welcome .welcomeText").addClass("topslide");
@@ -112,15 +112,18 @@ $(function(){
 
         if(abou >= aboutme && abou < aiDesign) {
             $("#aboutme .info").addClass("infoview");
+            $("#aboutme .infoLeft").addClass("aniLeft");
+            $("#aboutme .infoRight").addClass("aniRight");
         } else {
             $("#aboutme .info").removeClass("infoview");
+            $("#aboutme .infoLeft").removeClass("aniLeft");
+            $("#aboutme .infoRight").removeClass("aniRight");
         };
     });
 
     //coding
 
         const upBox = document.querySelectorAll(".upBox");
-        const codingList = document.querySelectorAll(".codingList");
         const resultLink = document.querySelectorAll(".resultLink");
 
         const tl = gsap.timeline({
