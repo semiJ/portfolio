@@ -3,7 +3,7 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -800;
+    let baseline = -600;
 
     let welcome = $("#welcome").offset().top + baseline;
     let aboutme = $("#aboutme").offset().top + baseline;
@@ -86,7 +86,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= welcome && abou < aiDesign) {
+        if(abou >= aboutme && abou < aiDesign) {
             $("#aboutme .info").addClass("infoview");
         } else {
             $("#aboutme .info").removeClass("infoview");
@@ -97,6 +97,7 @@ $(function(){
 
         const upBox = document.querySelectorAll(".upBox");
         const codingList = document.querySelectorAll(".codingList");
+        const resultLink = document.querySelectorAll(".resultLink");
 
         const tl = gsap.timeline({
             scrollTrigger : {
@@ -111,6 +112,13 @@ $(function(){
                     codingList.forEach((t) => t.classList.remove("check"));
                     if (codingList[index]){
                         codingList[index].classList.add("check");
+                    }
+                },
+                onUpdate: (self) => {
+                    let index = Math.floor(self.progress * upBox.length - 1);
+                    resultLink.forEach((t) => t.classList.remove("resultView"));
+                    if (resultLink[index]){
+                        resultLink[index].classList.add("resultView");
                     }
                 }
             }
