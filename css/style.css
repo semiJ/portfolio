@@ -191,9 +191,6 @@
     /* main 영역 */
 
     /* main */
-    #main {
-        width: 100%;
-    }
 
     /* welcome 영역 */
     #welcome {
@@ -556,9 +553,9 @@
     }
     
     #coding .codingimgBox {
-        width: 50%;
+        width: 70%;
         object-fit: cover;
-        padding: 1.8rem;
+        padding: 0.8rem;
         box-sizing: border-box;
         border-radius: 20px;
         position: relative;
@@ -569,7 +566,7 @@
         height: 100%;
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 30%;
         transform: translate(-50%, -50%);
 
     }
@@ -619,7 +616,7 @@
     }
 
     #coding .codingtextBox {
-        width: 50%;
+        width: 30%;
         padding: 1.8rem;
         box-sizing: border-box;
         position: relative;
@@ -676,6 +673,7 @@
         margin: 0px auto;
         padding: 1.8rem;
         box-sizing: border-box;
+        position: relative;
     }
     
     #aiDesign .textBox {
@@ -693,6 +691,7 @@
     
     #aiDesign .moveCard {
         display: flex;
+        margin: 3em 2em;
     }
     
     #aiDesign .moveCard li {
@@ -702,18 +701,18 @@
         box-sizing: border-box;
         flex-shrink: 0;
     }
+
+    #aiDesign .moveCard img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     
     #aiDesign .moveCard .aibox {
         width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
-    }
-    
-    #aiDesign .moveCard img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
     
     #aiDesign .aibox::after {
@@ -751,6 +750,79 @@
     
     #aiDesign .moveCard .move03{
         transform: rotate(15deg);
+    }
+
+    #aiDesign .viewCard {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        display: none;
+    }
+    
+    #aiDesign .viewCard li {
+        width: 500px;
+        height: 600px;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: flex;
+    }
+
+    #aiDesign .viewCard li:nth-child(1) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #aiDesign .viewCard li:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #aiDesign .viewCard li:nth-child(3) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #aiDesign .viewCard li:nth-child(4) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #aiDesign .viewCard li:nth-child(5) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #aiDesign .viewCard .xmark {
+        font-size: 1.5rem;
+        margin: 0px 0.8rem;
+        color: var(--four_red);
+    }
+
+    #aiDesign .viewCard img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .xmark.designop {
+        display: block;
     }
     
     /* /aiDesign */

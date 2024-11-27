@@ -3,7 +3,7 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -400;
+    let baseline = -600;
 
     let header = $("header").offset().top + baseline;
     let welcome = $("#welcome").offset().top + baseline;
@@ -110,7 +110,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= coding && abou < aiDesign) {
+        if(abou >= aboutme && abou < coding) {
             $("#aboutme .info").addClass("infoview");
             $("#aboutme .infoLeft").addClass("aniLeft");
             $("#aboutme .infoRight").addClass("aniRight");
@@ -207,6 +207,22 @@ $(function(){
             markers :false,
         },
     });
+
+
+    $("#aiDesign .moveCard li").on("click", function(){
+        i = $(this).index();
+        
+        $(".viewCard li").removeClass("designop")
+        $(".viewCard li").eq(i).addClass("designop")
+    });
+
+    $("#aiDesign .viewCard .xmark").on("click", function(){
+        i = $(this).index();
+        
+        $(".viewCard li").removeClass("designop")
+    })
+
+    
 
     // /aiDesign
     
