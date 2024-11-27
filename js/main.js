@@ -50,6 +50,7 @@ $(function(){
 
     let viewBox = document.querySelector("#welcome .welcomebox");
     let txt = document.querySelector("#welcome .welcomeText");
+    let subtxt = document.querySelector("#welcome .welcomeMy");
     let scroll = document.querySelector("#welcome .scroll");
 
     let te = gsap.timeline({
@@ -67,16 +68,25 @@ $(function(){
         opacity: "0",
         duration: "5",
     });
+
+    te.to(viewBox, {
+        scale: "0.3",
+        translateY : "-200%",
+        duration: "50",
+    });    
     
     te.to(txt, { 
         opacity: "1",
+        left: "50%",
+        duration: "10",
+    });
+
+    te.to(subtxt, { 
+        opacity: "1",
+        right: "50%",
         duration: "10",
     });
     
-    te.to(viewBox, {
-        scale: "1.8",
-        duration: "30",
-    });    
 
     // /welcome
 

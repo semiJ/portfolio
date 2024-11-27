@@ -200,6 +200,7 @@
         width: 100%;
         height: 100vh;
         min-height: 700px;
+        background-color: var(--one_red);
     }
 
     #welcome .welcomebox {
@@ -211,6 +212,7 @@
         background-position: center;
         background-size: cover;
         overflow: hidden;
+        transition: 0.8s;
     }
 
     #welcome img {
@@ -223,23 +225,34 @@
 
     #welcome .welcomeText {
         opacity: 0;
-        transition: 2s;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    }
-
-    #welcome h2 {
-        font-size: 2em;
         position: absolute;
-        left: 10%;
-        top: 25%;
-        line-height: 2em;
-        z-index: 1;
-        font-size: 3em;
+        left: -0%;
+        top: 30%;
+        transition: 2s;
+        transform: translateX(-50%);
     }
     
     #welcome .publisher {
-        color: var(--four_red);
-        letter-spacing: 10px;
+        font-size: 10em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 5px var(--white);
+        color: var(--white_gray);
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    #welcome .welcomeMy {
+        opacity: 0;
+        position: absolute;
+        right: -0%;
+        top: 60%;
+        transition: 2s;
+        transform: translateX(50%);
+    }
+
+    #welcome .welcomeMyTxt {
+        font-size: 5em;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+        color: var(--white);
     }
 
      /*scroll*/
