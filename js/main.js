@@ -217,7 +217,7 @@ $(function(){
     });
 
     $("#aiDesign .viewCard .xmark").on("click", function() {
-        $(this).closest("li").removeClass("designop");
+        $("#aiDesign .viewCard li").removeClass("designop");
     });
 
 
