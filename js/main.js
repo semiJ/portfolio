@@ -111,7 +111,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= aboutme) {
+        if(abou > coding) {
             $("#aboutme .info").addClass("infoview");
             $("#aboutme .infoLeft").addClass("aniLeft");
             $("#aboutme .infoRight").addClass("aniRight");
