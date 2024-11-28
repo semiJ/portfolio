@@ -3,7 +3,7 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -600;
+    let baseline = -900;
 
     let header = $("header").offset().top + baseline;
     let welcome = $("#welcome").offset().top + baseline;
@@ -72,7 +72,8 @@ $(function(){
 
     te.to(viewBox, {
         scale: "0.3",
-        translateY : "-200%",
+        opacity: 0.8,
+        translateY: "-200%",
         duration: "80",
     });
     
@@ -92,7 +93,7 @@ $(function(){
         let wel = $(this).scrollTop();
         // console.log(wel); // 스크롤 위치 확인
 
-        if(wel >= welcome && wel <= aboutme) {
+        if(wel < welcome && wel >= aiDesign) {
             $("#welcome .welcomeText").addClass("topslide");
             $("#welcome .welcomeMy").addClass("bottomslide");
         } else {
@@ -110,7 +111,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou >= aboutme && abou < coding) {
+        if(abou >= aboutme) {
             $("#aboutme .info").addClass("infoview");
             $("#aboutme .infoLeft").addClass("aniLeft");
             $("#aboutme .infoRight").addClass("aniRight");
@@ -209,20 +210,16 @@ $(function(){
     });
 
 
-    $("#aiDesign .moveCard li").on("click", function(){
-        i = $(this).index();
-        
-        $(".viewCard li").removeClass("designop")
-        $(".viewCard li").eq(i).addClass("designop")
+    $("#aiDesign .moveCard li").on("click", function() {
+        let i = $(this).index();
+        $("#aiDesign .viewCard li").removeClass("designop");
+        $("#aiDesign .viewCard li").eq(i).addClass("designop");
     });
 
-    $("#aiDesign .viewCard .xmark").on("click", function(){
-        i = $(this).index();
-        
-        $(".viewCard li").removeClass("designop")
-    })
+    $("#aiDesign .viewCard .xmark").on("click", function() {
+        $(this).closest("li").removeClass("designop");
+    });
 
-    
 
     // /aiDesign
     
