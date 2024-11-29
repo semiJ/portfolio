@@ -122,6 +122,11 @@ $(function(){
         };
     });
 
+    $("#aboutme .infoRight").on("click", function(){
+        $("#aboutme .infoRight").addClass("aniRights");
+        $("#aboutme .infoRight").removeClass("aniRights");
+    });
+
     //coding
 
         const upBox = document.querySelectorAll(".upBox");
@@ -227,7 +232,10 @@ $(function(){
     $(window).on("scroll", function(){
         let dgsc = $(this).scrollTop();
 
-        if(dgsc < footer && dgsc >= aiDesign) {
+        if(dgsc < footer && dgsc >= coding) {
+            $("#aiDesign .viewCard li").eq(i).addClass("designop");
+            $("#aiDesign .designWrap").addClass("dgview");
+        } else {
             $("#aiDesign .viewCard li").removeClass("designop");
             $("#aiDesign .designWrap").removeClass("dgview");
         };
