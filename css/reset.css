@@ -41,6 +41,30 @@ html .h_hide {
     display: none;
 }
 
+@media all and (min-width:1024px){
+    html {
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width:768px){
+    html {
+        font-size: 16px;
+    }
+}
+
+@media all and (min-width:480px){
+    html {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width:479px){
+    html {
+        font-size: 12px;
+    }
+}
+
 /* 오뮤 다예쁨체 */
 @font-face {
     font-family: 'omyu_pretty';
