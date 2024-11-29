@@ -210,7 +210,7 @@
         background-position: center;
         background-size: cover;
         overflow: hidden;
-        transition: 1.5s;
+        transition: 2s;
     }
 
     #welcome img {
@@ -227,6 +227,7 @@
         left: -0%;
         top: 30%;
         transform: translateX(-50%);
+        transition: all 2s ease-out;
     }
 
     #welcome .welcomeText.topslide {
@@ -247,6 +248,7 @@
         right: -10%;
         bottom: 40%;
         transform: translateX(50%);
+        transition: all 0.8s ease-out;
     }
 
     #welcome .welcomeMy.bottomslide {
@@ -422,7 +424,7 @@
     }
 
     .info .infoMiddle h3 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 0.8rem;
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
@@ -551,16 +553,12 @@
         min-width: 80%;
         height: 80%;
         min-height: 700px;
-        /* background-color: var(--two_red); */
-        border: 2px solid var(--four_red);
-        box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+        border-top: 5px solid var(--four_red);
         display: flex;
         justify-content: center;
-        gap: 20px;
         padding: 1.2rem;
         box-sizing: border-box;
         overflow: hidden;
-        border-radius: 50px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -569,29 +567,29 @@
     
     #coding .codingimgBox {
         width: 70%;
+        height: 100%;
         object-fit: cover;
         padding: 0.8rem;
         box-sizing: border-box;
         border-radius: 20px;
         position: relative;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%, -50%);
+        background-color: var(--one_red);
+        overflow: hidden;
     }
 
     .codingimgBox li {
         width: 100%;
         height: 100%;
         position: absolute;
-        left: 30%;
-        top: 60%;
-        transform: translate(-50%, -50%);
+        left: 5%;
+        top: 5%;
     }
 
-    .codingThumbnail img {
-        width: 100%;
+    .codingimgBox img {
+        width: 90%;
+        height: 90%;
         object-fit: cover;
-        margin: 0px auto;
+        position: absolute;
     }
 
     .codingThumbnail .img1 {
@@ -666,6 +664,7 @@
         position: absolute;
         left: 5%;
         top: 15%;
+        z-index: 5;
     }
     
     #coding .codingtextBox ol {

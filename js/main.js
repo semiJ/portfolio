@@ -80,7 +80,7 @@ $(function(){
     te.to(txt, { 
         opacity: "1",
         left: "50%",
-        duration: "20",
+        duration: "50",
     });
 
     te.to(subtxt, { 
@@ -93,7 +93,7 @@ $(function(){
         let wel = $(this).scrollTop();
         // console.log(wel); // 스크롤 위치 확인
 
-        if(wel < welcome && wel >= aiDesign) {
+        if(wel < coding && wel >= aiDesign) {
             $("#welcome .welcomeText").addClass("topslide");
             $("#welcome .welcomeMy").addClass("bottomslide");
         } else {
