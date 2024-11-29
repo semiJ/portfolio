@@ -211,12 +211,14 @@ $(function(){
 
 
     $("#aiDesign .moveCard .aibox").on("click", function() {
+
         let i = $(this).index();
-        $("#aiDesign .viewCard li").removeClass("designop");
-        $("#aiDesign .viewCard li").eq(i).addClass("designop");
+
+        $("#aiDesign .viewCard .viewAibox").removeClass("designop");
+        $("#aiDesign .viewCard .viewAibox").eq(i).addClass("designop");
 
         $("#aiDesign .designWrap").removeClass("dgview");
-        $("#aiDesign .designWrap").addClass("dgview");
+        $("#aiDesign .designWrap").eq(i).addClass("dgview");
     });
 
     $("#aiDesign .viewCard .xmark").on("click", function() {
@@ -229,7 +231,7 @@ $(function(){
 
         if(dgsc < footer && dgsc >= coding) {
             $("#aiDesign .viewCard li").eq(i).addClass("designop");
-            $("#aiDesign .designWrap").addClass("dgview");
+            $("#aiDesign .designWrap").eq(i).addClass("dgview");
         } else {
             $("#aiDesign .viewCard li").removeClass("designop");
             $("#aiDesign .designWrap").removeClass("dgview");
