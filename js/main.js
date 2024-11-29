@@ -214,10 +214,23 @@ $(function(){
         let i = $(this).index();
         $("#aiDesign .viewCard li").removeClass("designop");
         $("#aiDesign .viewCard li").eq(i).addClass("designop");
+
+        $("#aiDesign .designWrap").removeClass("dgview");
+        $("#aiDesign .designWrap").addClass("dgview");
     });
 
     $("#aiDesign .viewCard .xmark").on("click", function() {
         $("#aiDesign .viewCard li").removeClass("designop");
+        $("#aiDesign .designWrap").removeClass("dgview");
+    });
+
+    $(window).on("scroll", function(){
+        let dgsc = $(this).scrollTop();
+
+        if(dgsc < footer && dgsc >= aiDesign) {
+            $("#aiDesign .viewCard li").removeClass("designop");
+            $("#aiDesign .designWrap").removeClass("dgview");
+        };
     });
 
 
