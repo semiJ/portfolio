@@ -111,7 +111,7 @@ $(function(){
         let abou = $(this).scrollTop();
         // console.log(abou); // 스크롤 위치 확인
 
-        if(abou > coding) {
+        if(abou >= aboutme) {
             $("#aboutme .info").addClass("infoview");
             $("#aboutme .infoLeft").addClass("aniLeft");
             $("#aboutme .infoRight").addClass("aniRight");
@@ -120,11 +120,6 @@ $(function(){
             $("#aboutme .infoLeft").removeClass("aniLeft");
             $("#aboutme .infoRight").removeClass("aniRight");
         };
-    });
-
-    $("#aboutme .infoRight").on("click", function(){
-        $("#aboutme .infoRight").addClass("aniRights");
-        $("#aboutme .infoRight").removeClass("aniRights");
     });
 
     //coding
@@ -215,7 +210,7 @@ $(function(){
     });
 
 
-    $("#aiDesign .moveCard li").on("click", function() {
+    $("#aiDesign .moveCard .aibox").on("click", function() {
         let i = $(this).index();
         $("#aiDesign .viewCard li").removeClass("designop");
         $("#aiDesign .viewCard li").eq(i).addClass("designop");

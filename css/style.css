@@ -196,6 +196,7 @@
         height: 100vh;
         min-height: 700px;
         background-color: var(--one_red);
+        overflow: hidden;
     }
 
     #welcome .welcomebox {
@@ -351,17 +352,6 @@
 
     #aboutme .infoRight.aniRight{
         right: 18%;
-    }
-
-    #aboutme .infoRight.aniRights {
-        width: 100%;
-        height: 90%;
-        min-height: 702px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 50;
     }
 
     .info .infoLeft {
@@ -858,10 +848,7 @@
     }
 
     #aiDesign .cmnSon {
-        position: relative;
-        left: 120%;
-        top: 30%;
-        
+        display: none;
     }
 
     #aiDesign .cmnSon .xmark {
@@ -1016,12 +1003,14 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 0%;
+        left: 0%;
         display: none;
     }
 
     .subMenu {
+        width: 100%;
+        height: 100vh;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1048,9 +1037,6 @@
     }
 
     /* menuBar 서브메뉴 bar */
-    .menuBar {
-        /* display: none; */
-    }
 
     .menuBar {
         /* background-color: #eaf;*/
@@ -1266,6 +1252,7 @@
         padding: 5rem 2rem;
         box-sizing: border-box;
         box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+        border-radius: 10px;
     }
 
     .info .infoLeft dl {
@@ -1300,10 +1287,11 @@
         box-sizing: border-box;
         box-shadow: rgb(255, 196, 196) 0px 5px 15px;
         margin: 2rem 0px;
+        border-radius: 10px;
     }
 
     .info .infoMiddle h3 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         margin-bottom: 0.8rem;
         text-transform: uppercase;
         -webkit-text-stroke: 3px var(--red); 
@@ -1311,7 +1299,7 @@
     }
 
     .info .infoMiddle h3 span {
-        margin-left: 3rem;
+        margin-left: 4rem;
     }
 
     .info .infoMiddle p {
@@ -1320,13 +1308,13 @@
 
     .info .infoImg {
         width: 100%;
-        height: 100%;
+        height: 300px;
         border-radius: 50px;
         background: url(./../img/container/semi.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        margin: 2.5rem 0px;
+        margin: 0.8rem 0px;
     }
 
     .info .infoRight {
@@ -1337,6 +1325,7 @@
         padding: 5rem 2rem;
         box-sizing: border-box;
         box-shadow: rgb(255, 196, 196) 0px 5px 15px;
+        border-radius: 10px;
     }
 
     .info .infoRight h3 {
@@ -1405,7 +1394,7 @@
 
     /* coding */
     #coding {
-        width: 80%;
+        width: 100%;
         height: 100vh;
         min-height: 700px;
         margin: 0px auto;
@@ -1414,35 +1403,26 @@
         position: relative;
     }
 
-    #coding li {
-        cursor: pointer;
-    }
-
     #coding .Codinginner {
         width: 100%;
         min-width: 80%;
-        height: 80%;
+        height: 90%;
         min-height: 700px;
         border-top: 5px solid var(--four_red);
-        display: flex;
-        justify-content: center;
-        padding: 1.2rem;
+        padding: 0.8rem;
         box-sizing: border-box;
-        overflow: hidden;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0px auto;
     }
 
     #coding .codingimgBox {
-        width: 70%;
-        height: 100%;
+        width: 100%;
+        height: 70%;
         object-fit: cover;
         padding: 0.8rem;
         box-sizing: border-box;
         border-radius: 20px;
         position: relative;
+        bottom: -40%;
         background-color: var(--one_red);
         overflow: hidden;
     }
@@ -1463,37 +1443,32 @@
     }
 
     .codingThumbnail .img1 {
-        transform: rotate(-5deg);
+        transform: rotate(9deg);
     }
 
     .codingThumbnail .img2 {
-        transform: rotate(5deg);
+        transform: rotate(-5deg);
     }
 
     .codingThumbnail .img3 {
-        transform: rotate(-9deg);
+        transform: rotate(4deg);
     }
 
     .codingThumbnail .img4 {
         transform: rotate(0deg);
     }
 
-    .resultLink {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-
     .resultLink a {
-        width: 6em;
-        padding: 0.5rem;
+        width: 8em;
+        padding: 1rem;
         box-sizing: border-box;
         display: block;
         background-color: var(--four_red);
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         border-radius: 10px;
         text-align: center;
         color: var(--white);
+        margin-bottom: 1rem;
     }
 
     .codingBox7 {
@@ -1501,16 +1476,12 @@
     }
 
     #coding .codingtextBox {
-        width: 30%;
+        width: 90%;
         padding: 1.8rem;
         box-sizing: border-box;
-        position: relative;
+        position: fixed;
+        top: 18%;
         text-align: center;
-        top: -30%;
-    }
-
-    #coding .codingtextBox li {
-        margin-bottom: 2rem;
     }
 
     #coding .codingtextBox .codingList .resultLink {
@@ -1533,19 +1504,19 @@
         color: transparent;
         position: absolute;
         left: 5%;
-        top: 15%;
+        top: 10%;
         z-index: 5;
     }
 
     #coding .codingtextBox ol {
-        font-size: 1.8rem;
         position: absolute;
-        top: 50%;
+        display: flex;
+        justify-content: space-between;
     }
 
     #coding .codingtextBox li {
         line-height: 2;
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
 
     /* /coding */
@@ -1699,10 +1670,13 @@
     }
 
     #aiDesign .viewCard .xmark {
-        font-size: 1.5rem;
-        margin-left: 0.8rem;
+        font-size: 2rem;
+        margin-left: 0.2rem;
         color: var(--four_red);
         cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 40px;
     }
 
     #aiDesign .viewCard img {
@@ -1730,15 +1704,8 @@
         transition: 1.2s;
     }
 
-    #aiDesign .cmnSon {
-        position: relative;
-        left: 120%;
-        top: 30%;
-        
-    }
-
-    #aiDesign .cmnSon .xmark {
-        position: absolute;
+    #aiDesign .comingSoon {
+        display: none;
     }
 
     /* /aiDesign */
@@ -1748,7 +1715,7 @@
     /* footer */
     footer {
         width: 100%;
-        height: 30vh;
+        height: 60vh;
         background-color: var(--one_red);
         display: flex;
         align-items: center;
@@ -1773,8 +1740,8 @@
 
     .topBtn {
         position: fixed;
-        right: 50px;
-        bottom: 50px;
+        right: 10px;
+        bottom: 10px;
         opacity: 0;
         z-index: 50;
         font-size: 1.8rem;
@@ -1801,8 +1768,6 @@
     /* ftconLeft 영역 */
     .ftconLeft {
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     .ftconLeft dl {
