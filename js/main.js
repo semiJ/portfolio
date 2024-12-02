@@ -213,6 +213,7 @@ $(function(){
     $("#aiDesign .moveCard .aibox").on("click", function() {
 
         let i = $(this).index();
+        console.log(i);
 
         $("#aiDesign .viewCard .viewAibox").removeClass("designop");
         $("#aiDesign .viewCard .viewAibox").eq(i).addClass("designop");
