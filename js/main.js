@@ -1,5 +1,11 @@
 $(function(){
 
+    $("nav .menuBar").on("click", function(){
+        $(this).toggleClass("active");
+        $("nav .subBack").toggleClass("viewControl");
+        $("header").addClass("on");
+    });
+
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
@@ -25,12 +31,6 @@ $(function(){
             $("nav .subBack").removeClass("viewControl");
             $("header").stop().animate({"transition":"1s"});
         };
-    });
-
-    $("nav .menuBar").on("click", function(){
-        $(this).toggleClass("active");
-        $("nav .subBack").toggleClass("viewControl");
-        $("header").addClass("on");
     });
 
     $("header .mainMenu li").on("click",function(){
