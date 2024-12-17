@@ -233,11 +233,11 @@
     }
     
     #welcome .publisher {
-        font-size: 10em;
+        font-size: 12em;
         text-transform: uppercase;
         -webkit-text-stroke: 5px var(--white);
         color: var(--white_gray);
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+        text-shadow: 1px 2px 5px rgba(255, 255, 255, 0.5);
     }
 
     #welcome .welcomeMy {
@@ -1373,10 +1373,6 @@
 
     .info .infoRight .colorPalate .cp05 {
         background-color: var(--red);
-    }
-
-    .aboutFont li:first-child {
-        font-family: 'Katuri';
     }
 
     /* /aboutme */
