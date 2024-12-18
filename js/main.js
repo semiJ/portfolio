@@ -9,11 +9,10 @@ $(function(){
     gsap.registerPlugin(ScrollTrigger);
 
     // header 영역  
-    let baseline = -900;
-
+    let baseline = -600;
     let header = $("header").offset().top + baseline;
     let welcome = $("#welcome").offset().top + baseline;
-    let aboutme = $("#aboutme").offset().top + baseline;
+    let aboutme = $("#aboutme").offset().top;
     let coding = $("#coding").offset().top + baseline;
     let aiDesign = $("#aiDesign").offset().top + baseline;
     let ft = $("footer").offset().top + baseline;
