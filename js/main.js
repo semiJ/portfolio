@@ -214,8 +214,8 @@ $(function(){
         let i = $(this).index();
         console.log(i);
 
-        $("#aiDesign .viewCard .viewAibox").removeClass("designop");
-        $("#aiDesign .viewCard .viewAibox").eq(i).addClass("designop");
+        $("#aiDesign .viewCard li").removeClass("designop");
+        $("#aiDesign .viewCard li").eq(i).addClass("designop");
 
         $("#aiDesign .designWrap").removeClass("dgview");
         $("#aiDesign .designWrap").eq(i).addClass("dgview");
